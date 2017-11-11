@@ -374,7 +374,7 @@ namespace NetRumble
 
             spriteBatch.Draw(blankTexture,
                              new Rectangle(0, 0, viewport.Width, viewport.Height),
-                             new Color(0, 0, 0, (byte)alpha));
+                             new Color((byte)0, (byte)0, (byte)0, (byte)alpha));
             
             spriteBatch.End();
         }

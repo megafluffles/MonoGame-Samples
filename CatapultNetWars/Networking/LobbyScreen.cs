@@ -9,6 +9,7 @@
 
 #region Using Statements
 using System;
+using CatapaultNetWars.Properties;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Input;

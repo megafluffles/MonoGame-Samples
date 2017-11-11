@@ -10,8 +10,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CatapaultNetWars</RootNamespace>
     <AssemblyName>CatapaultNetWars</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -23,6 +24,7 @@
     <DefineConstants>TRACE;DEBUG;WINDOWS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -32,6 +34,7 @@
     <DefineConstants>TRACE;WINDOWS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -116,16 +119,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\MonoGame.Framework\MonoGame.Framework.WindowsGL.csproj">
-      <Project>{7DE47032-A904-4C29-BD22-2D235E8D91BA}</Project>
-      <Name>MonoGame.Framework.WindowsGL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\ThirdParty\Lidgren.Network\Lidgren.Network.Windows.csproj">
-      <Project>{AE483C29-042E-4226-BA52-D247CE7676DA}</Project>
-      <Name>Lidgren.Network.Windows</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Fonts\HUDFont.xnb">
@@ -237,7 +230,20 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\MonoGame.Framework\MonoGame.Framework.Net.WindowsGL.csproj">
+      <Project>{6d6009f4-0afb-4806-89d7-7945f20270f5}</Project>
+      <Name>MonoGame.Framework.Net.WindowsGL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MonoGame.Framework\MonoGame.Framework.WindowsGL.csproj">
+      <Project>{6d75e618-19ca-4c51-9546-f10965fbc0b8}</Project>
+      <Name>MonoGame.Framework.WindowsGL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\Lidgren.Network\Lidgren.Network.Windows.csproj">
+      <Project>{ae483c29-042e-4226-ba52-d247ce7676da}</Project>
+      <Name>Lidgren.Network.Windows</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Sounds\BoulderHit.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -257,6 +263,9 @@
     <Content Include="Content\Sounds\Win.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

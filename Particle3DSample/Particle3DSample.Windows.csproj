@@ -9,6 +9,8 @@
     <RootNamespace>Particle3DSample</RootNamespace>
     <AssemblyName>Particle3DSample</AssemblyName>
     <ProjectGuid>{4E34D15A-4FDD-42D4-9645-83298049035C}</ProjectGuid>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -24,6 +26,7 @@
     <EnablePackageSigning>False</EnablePackageSigning>
     <IncludeMonoRuntime>False</IncludeMonoRuntime>
     <UseSGen>False</UseSGen>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -37,6 +40,7 @@
     <EnablePackageSigning>False</EnablePackageSigning>
     <IncludeMonoRuntime>False</IncludeMonoRuntime>
     <UseSGen>False</UseSGen>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
@@ -53,6 +57,7 @@
       <Link>Content\ParticleEffect.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="app.config" />
     <None Include="Info.plist">
     </None>
   </ItemGroup>

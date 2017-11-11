@@ -10,6 +10,7 @@
 #region Using Statements
 using System;
 using System.Diagnostics;
+using CatapaultNetWars.Properties;
 using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Net;
 using GameStateManagement;

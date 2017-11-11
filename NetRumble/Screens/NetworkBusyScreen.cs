@@ -169,15 +169,15 @@ namespace NetRumble
                                                           (int)textSize.Y + vPad * 2);
 
             // Fade the popup alpha during transitions.
-            Color color = new Color(255, 255, 255, TransitionAlpha);
+            Color color = new Color((byte)255, (byte)255, (byte)255, TransitionAlpha);
 
             // Draw the background rectangle.
             Rectangle backgroundRectangle2 = new Rectangle(backgroundRectangle.X - 1, 
                 backgroundRectangle.Y - 1, backgroundRectangle.Width + 2, 
                 backgroundRectangle.Height + 2);
-            ScreenManager.DrawRectangle(backgroundRectangle2, new Color(128, 128, 128,
+            ScreenManager.DrawRectangle(backgroundRectangle2, new Color((byte)128, (byte)128, (byte)128,
                 (byte)(192.0f * (float)TransitionAlpha / 255.0f)));
-            ScreenManager.DrawRectangle(backgroundRectangle, new Color(0, 0, 0,
+            ScreenManager.DrawRectangle(backgroundRectangle, new Color((byte)0, (byte)0, (byte)0,
                 (byte)(232.0f * (float)TransitionAlpha / 255.0f)));
 
             //spriteBatch.Begin(0,BlendState.NonPremultiplied, null, null, null);

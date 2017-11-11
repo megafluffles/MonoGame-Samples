@@ -12,6 +12,7 @@ using System;
 using System.Linq;
 using System.Diagnostics;
 using System.Collections.Generic;
+using CatapaultNetWars.Properties;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.GamerServices;

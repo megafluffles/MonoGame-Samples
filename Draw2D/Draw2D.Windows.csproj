@@ -11,6 +11,8 @@
     <RootNamespace>Draw2D</RootNamespace>
     <AssemblyName>Draw2D</AssemblyName>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -21,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -30,6 +33,7 @@
     <DefineConstants>TRACE;WINDOWS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
@@ -58,12 +62,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\MonoGame.Framework\MonoGame.Framework.WindowsGL.csproj">
-      <Project>{7DE47032-A904-4C29-BD22-2D235E8D91BA}</Project>
-      <Name>MonoGame.Framework.WindowsGL</Name>
-    </ProjectReference>
+    <None Include="app.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="..\CompiledContent\Windows\Content\Fonts\Font.xnb">
       <Link>Content\Font.xnb</Link>
@@ -73,6 +73,16 @@
       <Link>Content\logo.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MonoGame.Framework\MonoGame.Framework.Net.WindowsGL.csproj">
+      <Project>{6d6009f4-0afb-4806-89d7-7945f20270f5}</Project>
+      <Name>MonoGame.Framework.Net.WindowsGL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MonoGame.Framework\MonoGame.Framework.WindowsGL.csproj">
+      <Project>{6d75e618-19ca-4c51-9546-f10965fbc0b8}</Project>
+      <Name>MonoGame.Framework.WindowsGL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

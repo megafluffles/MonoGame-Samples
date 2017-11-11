@@ -138,7 +138,7 @@ namespace NetRumble
                 ScreenManager.Font.LineSpacing * 1.1f;
 
             // Fade the popup alpha during transitions.
-            Color color = new Color(255, 255, 255, TransitionAlpha);
+            Color color = new Color((byte)255, (byte)255, (byte)255, TransitionAlpha);
 
             // Draw the background rectangles
             Rectangle rect = new Rectangle(
@@ -154,9 +154,9 @@ namespace NetRumble
 
             Rectangle rect2 = new Rectangle(rect.X - 1, rect.Y - 1, 
                 rect.Width + 2, rect.Height + 2);
-            ScreenManager.DrawRectangle(rect2, new Color(128, 128, 128, 
+            ScreenManager.DrawRectangle(rect2, new Color((byte)128, (byte)128, (byte)128, 
                 (byte)(192.0f * (float)TransitionAlpha / 255.0f)));
-            ScreenManager.DrawRectangle(rect, new Color(0, 0, 0, 
+            ScreenManager.DrawRectangle(rect, new Color((byte)0, (byte)0, (byte)0, 
                 (byte)(232.0f * (float)TransitionAlpha / 255.0f)));
 
             // Draw the message box text.

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectGuid>{36CDED1D-BE90-4C12-BC0A-F923AB92B98D}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -10,6 +10,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -33,9 +35,11 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <WarningLevel>4</WarningLevel>
     <DefineConstants>TRACE;DEBUG;WINDOWS</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
@@ -355,8 +359,12 @@
     <Folder Include="Effects\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\MonoGame.Framework\MonoGame.Framework.Net.WindowsGL.csproj">
+      <Project>{6d6009f4-0afb-4806-89d7-7945f20270f5}</Project>
+      <Name>MonoGame.Framework.Net.WindowsGL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\MonoGame.Framework\MonoGame.Framework.WindowsGL.csproj">
-      <Project>{7DE47032-A904-4C29-BD22-2D235E8D91BA}</Project>
+      <Project>{c7b3444e-5249-493e-8522-926a400e301b}</Project>
       <Name>MonoGame.Framework.WindowsGL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\ThirdParty\Lidgren.Network\Lidgren.Network.Windows.csproj">

@@ -177,7 +177,7 @@ namespace NetRumble
                     titlePosition.Y;
                 ScreenManager.SpriteBatch.Begin();
                 ScreenManager.SpriteBatch.Draw(titleTexture, titlePosition,
-                    new Color(255, 255, 255, TransitionAlpha));
+                    new Color((byte)255, (byte)255, (byte)255, TransitionAlpha));
                 ScreenManager.SpriteBatch.End();
             }
         }

@@ -11,6 +11,7 @@
 using System;
 using System.Threading;
 using System.Diagnostics;
+using CatapaultNetWars.Properties;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Net;
