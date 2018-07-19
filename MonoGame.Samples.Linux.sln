@@ -45,11 +45,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReachGraphicsDemo.Linux", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReachGraphicsDemoDataTypes.Linux", "ReachGraphicsDemoDataTypes\ReachGraphicsDemoDataTypes.Linux.csproj", "{8D359A6F-B0BB-4799-8311-406D5F57025A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lidgren.Network.Linux", "..\MonoGame\ThirdParty\Lidgren.Network\Lidgren.Network.Linux.csproj", "{758CB33D-6EBD-41EA-BB0C-55B1C97A325F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lidgren.Network.Linux", "..\..\MonoGame\ThirdParty\Lidgren.Network\Lidgren.Network.Linux.csproj", "{758CB33D-6EBD-41EA-BB0C-55B1C97A325F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.Framework.Linux", "..\MonoGame\MonoGame.Framework\MonoGame.Framework.Linux.csproj", "{35253CE1-C864-4CD3-8249-4D1319748E8F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.Framework.Linux", "..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Linux.csproj", "{35253CE1-C864-4CD3-8249-4D1319748E8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.Framework.Net.Linux", "..\MonoGame\MonoGame.Framework\MonoGame.Framework.Net.Linux.csproj", "{1B738549-0449-4504-B978-7BFC347E3F3C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.Framework.Net.Linux", "..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Net.Linux.csproj", "{1B738549-0449-4504-B978-7BFC347E3F3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

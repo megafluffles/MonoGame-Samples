@@ -9,7 +9,7 @@
     <RootNamespace>Particle3DSample</RootNamespace>
     <AssemblyName>Particle3DSample</AssemblyName>
     <ProjectGuid>{4E34D15A-4FDD-42D4-9645-83298049035C}</ProjectGuid>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

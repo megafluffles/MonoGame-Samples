@@ -625,15 +625,15 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\MonoGame\ThirdParty\Lidgren.Network\Lidgren.Network.Linux.csproj">
-      <Project>{758CB33D-6EBD-41EA-BB0C-55B1C97A325F}</Project>
-      <Name>Lidgren.Network.Linux</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Linux.csproj">
+    <ProjectReference Include="..\..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Linux.csproj">
       <Project>{35253CE1-C864-4CD3-8249-4D1319748E8F}</Project>
       <Name>MonoGame.Framework.Linux</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Net.Linux.csproj">
+    <ProjectReference Include="..\..\..\MonoGame\ThirdParty\Lidgren.Network\Lidgren.Network.Linux.csproj">
+      <Project>{758CB33D-6EBD-41EA-BB0C-55B1C97A325F}</Project>
+      <Name>Lidgren.Network.Linux</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Net.Linux.csproj">
       <Project>{1B738549-0449-4504-B978-7BFC347E3F3C}</Project>
       <Name>MonoGame.Framework.Net.Linux</Name>
     </ProjectReference>
