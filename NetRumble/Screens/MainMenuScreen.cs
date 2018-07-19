@@ -261,23 +261,24 @@ namespace NetRumble
         /// </summary>
         public void JoinInvitedGame()
         {
-            try
-            {
-                // begin to join the game we were invited to
-                IAsyncResult asyncResult = NetworkSession.BeginJoinInvited(1, null, null);
+			throw new NotImplementedException("BeginJoinInvited is not implemented");
+            //try
+            //{
+            //    // begin to join the game we were invited to
+            //    IAsyncResult asyncResult = NetworkSession.BeginJoinInvited(1, null, null);
 
-                // create the busy screen
-                NetworkBusyScreen busyScreen = new NetworkBusyScreen("Joining the session...", asyncResult);
-                busyScreen.OperationCompleted += InvitedSessionJoined;
-                ScreenManager.AddScreen(busyScreen);
-            }
-            catch
-            {
-                // could not begin to join invited game, so default to the pre-existing MainMenuScreen
-            }
+            //    // create the busy screen
+            //    NetworkBusyScreen busyScreen = new NetworkBusyScreen("Joining the session...", asyncResult);
+            //    busyScreen.OperationCompleted += InvitedSessionJoined;
+            //    ScreenManager.AddScreen(busyScreen);
+            //}
+            //catch
+            //{
+            //    // could not begin to join invited game, so default to the pre-existing MainMenuScreen
+            //}
 
-            ScreenManager.invited = null;
-            updateState = true;
+            //ScreenManager.invited = null;
+            //updateState = true;
         }
 
 
@@ -624,42 +625,43 @@ namespace NetRumble
         /// </summary>
         void InvitedSessionJoined(object sender, OperationCompletedEventArgs e)
         {
-            NetworkSession networkSession = null;
-            try
-            {
-                networkSession = NetworkSession.EndJoinInvited(e.AsyncResult);
-            }
-            catch (NetworkSessionJoinException je)
-            {
-                const string message = "Failed joining the session (";
-                MessageBoxScreen messageBox = new MessageBoxScreen(message + je.JoinError.ToString() + ").");
-                messageBox.Accepted += FailedMessageBox;
-                messageBox.Cancelled += FailedMessageBox;
-                ScreenManager.AddScreen(messageBox);
+			throw new NotImplementedException("EndJoinInvited is not implemented");
+            //NetworkSession networkSession = null;
+            //try
+            //{
+            //    networkSession = NetworkSession.EndJoinInvited(e.AsyncResult);
+            //}
+            //catch (NetworkSessionJoinException je)
+            //{
+            //    const string message = "Failed joining the session (";
+            //    MessageBoxScreen messageBox = new MessageBoxScreen(message + je.JoinError.ToString() + ").");
+            //    messageBox.Accepted += FailedMessageBox;
+            //    messageBox.Cancelled += FailedMessageBox;
+            //    ScreenManager.AddScreen(messageBox);
 
-                System.Console.WriteLine("Failed to join session:  " +
-                    je.Message);
-            }
-            catch (Exception ge)
-            {
-                const string message = "Failed joining the session (";
-                MessageBoxScreen messageBox = new MessageBoxScreen(message + ge.Message + ").");
-                messageBox.Accepted += FailedMessageBox;
-                messageBox.Cancelled += FailedMessageBox;
-                ScreenManager.AddScreen(messageBox);
+            //    System.Console.WriteLine("Failed to join session:  " +
+            //        je.Message);
+            //}
+            //catch (Exception ge)
+            //{
+            //    const string message = "Failed joining the session (";
+            //    MessageBoxScreen messageBox = new MessageBoxScreen(message + ge.Message + ").");
+            //    messageBox.Accepted += FailedMessageBox;
+            //    messageBox.Cancelled += FailedMessageBox;
+            //    ScreenManager.AddScreen(messageBox);
 
-                System.Console.WriteLine("Failed to join session:  " +
-                    ge.Message);
-            }
+            //    System.Console.WriteLine("Failed to join session:  " +
+            //        ge.Message);
+            //}
 
-            // Start the lobby if we got the session!
-            // Otherwise the MainMenuScreen will be available.
-            if (networkSession != null)
-            {
-                LobbyScreen lobbyScreen = new LobbyScreen(networkSession);
-                lobbyScreen.ScreenManager = ScreenManager;
-                ScreenManager.AddScreen(lobbyScreen);
-            }
+            //// Start the lobby if we got the session!
+            //// Otherwise the MainMenuScreen will be available.
+            //if (networkSession != null)
+            //{
+            //    LobbyScreen lobbyScreen = new LobbyScreen(networkSession);
+            //    lobbyScreen.ScreenManager = ScreenManager;
+            //    ScreenManager.AddScreen(lobbyScreen);
+            //}
         }
 
 

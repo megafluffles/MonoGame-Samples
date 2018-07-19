@@ -222,40 +222,43 @@ namespace CatapultGame
 		public static void InviteAccepted (ScreenManager screenManager,
 					InviteAcceptedEventArgs e)
 		{
-			// If we are already in a network session, leave it now.
-			NetworkSessionComponent self = FindSessionComponent (screenManager.Game);
+			// Added by me:
+			throw new NotImplementedException("BeginJoinInvited is not implemented");
 
-			if (self != null)
-				self.Dispose ();
+			//// If we are already in a network session, leave it now.
+			//NetworkSessionComponent self = FindSessionComponent (screenManager.Game);
 
-			try			{
-				// Which local profiles should we include in this session?
-				IEnumerable<SignedInGamer> localGamers = 
-			ChooseGamers (NetworkSessionType.PlayerMatch, e.Gamer.PlayerIndex);
+			//if (self != null)
+			//	self.Dispose ();
 
-				// Begin an asynchronous join-from-invite operation.
-				IAsyncResult asyncResult = NetworkSession.BeginJoinInvited (localGamers, 
-									null, null);
+			//try			{
+			//	// Which local profiles should we include in this session?
+			//	IEnumerable<SignedInGamer> localGamers = 
+			//ChooseGamers (NetworkSessionType.PlayerMatch, e.Gamer.PlayerIndex);
 
-				// Use the loading screen to replace whatever screens were previously
-				// active. This will completely reset the screen state, regardless of
-				// whether we were in the menus or playing a game when the invite was
-				// delivered. When the loading screen finishes, it will activate the
-				// network busy screen, which displays an animation as it waits for
-				// the join operation to complete.
-				NetworkBusyScreen busyScreen = new NetworkBusyScreen (asyncResult);
+			//	// Begin an asynchronous join-from-invite operation.
+			//	IAsyncResult asyncResult = NetworkSession.BeginJoinInvited (localGamers, 
+			//						null, null);
 
-				busyScreen.OperationCompleted += JoinInvitedOperationCompleted;
+			//	// Use the loading screen to replace whatever screens were previously
+			//	// active. This will completely reset the screen state, regardless of
+			//	// whether we were in the menus or playing a game when the invite was
+			//	// delivered. When the loading screen finishes, it will activate the
+			//	// network busy screen, which displays an animation as it waits for
+			//	// the join operation to complete.
+			//	NetworkBusyScreen busyScreen = new NetworkBusyScreen (asyncResult);
 
-				LoadingScreen.Load (screenManager, false, null, new BackgroundScreen (), 
-							busyScreen);
-			} catch (Exception exception) {
-				NetworkErrorScreen errorScreen = new NetworkErrorScreen (exception);
+			//	busyScreen.OperationCompleted += JoinInvitedOperationCompleted;
 
-				LoadingScreen.Load (screenManager, false, null, new BackgroundScreen (), 
-							new MainMenuScreen (), 
-							errorScreen);
-			}
+			//	LoadingScreen.Load (screenManager, false, null, new BackgroundScreen (), 
+			//				busyScreen);
+			//} catch (Exception exception) {
+			//	NetworkErrorScreen errorScreen = new NetworkErrorScreen (exception);
+
+			//	LoadingScreen.Load (screenManager, false, null, new BackgroundScreen (), 
+			//				new MainMenuScreen (), 
+			//				errorScreen);
+			//}
 		}
 
 
@@ -266,22 +269,25 @@ namespace CatapultGame
 		static void JoinInvitedOperationCompleted (object sender,
 						OperationCompletedEventArgs e)
 		{
-			ScreenManager screenManager = ((GameScreen)sender).ScreenManager;
+			// Added by me:
+			throw new NotImplementedException("EndJoinInvited is not implemented.");
 
-			try			{
-				// End the asynchronous join-from-invite operation.
-				NetworkSession networkSession = 
-					NetworkSession.EndJoinInvited (e.AsyncResult);
+			//ScreenManager screenManager = ((GameScreen)sender).ScreenManager;
 
-				// Create a component that will manage the session we just created.
-				NetworkSessionComponent.Create (screenManager, networkSession);
+			//try			{
+			//	// End the asynchronous join-from-invite operation.
+			//	NetworkSession networkSession = 
+			//		NetworkSession.EndJoinInvited (e.AsyncResult);
 
-				// Go to the lobby screen.
-				screenManager.AddScreen (new LobbyScreen (networkSession), null);
-			} catch (Exception exception) {
-				screenManager.AddScreen (new MainMenuScreen (), null);
-				screenManager.AddScreen (new NetworkErrorScreen (exception), null);
-			}
+			//	// Create a component that will manage the session we just created.
+			//	NetworkSessionComponent.Create (screenManager, networkSession);
+
+			//	// Go to the lobby screen.
+			//	screenManager.AddScreen (new LobbyScreen (networkSession), null);
+			//} catch (Exception exception) {
+			//	screenManager.AddScreen (new MainMenuScreen (), null);
+			//	screenManager.AddScreen (new NetworkErrorScreen (exception), null);
+			//}
 		}
 
 
