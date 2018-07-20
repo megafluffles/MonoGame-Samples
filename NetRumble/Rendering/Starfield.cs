@@ -130,6 +130,7 @@ namespace NetRumble
         /// </summary>
         private Texture2D cloudTexture;
 
+#if TRYNOTWORKING
         /// <summary>
         /// The effect used to draw the clouds.
         /// </summary>
@@ -139,12 +140,12 @@ namespace NetRumble
         /// The parameter on the cloud effect that receives the current position
         /// </summary>
         private EffectParameter cloudEffectPosition;
+#endif
+
+#endregion
 
 
-        #endregion
-
-
-        #region Initialization Methods
+#region Initialization Methods
 
 
         /// <summary>
@@ -183,12 +184,12 @@ namespace NetRumble
         {
             // load the cloud texture
             cloudTexture = contentManager.Load<Texture2D>("Textures/clouds");
-
+#if TRYNOTWORKING
             // load the cloud effect
             cloudEffect = contentManager.Load<Effect>("Effects/Clouds");
 			//cloudEffect = new CloudsEffect(graphicsDevice);
             cloudEffectPosition = cloudEffect.Parameters["Position"];
-      
+#endif
             // create the star texture
             starTexture = new Texture2D(graphicsDevice, 1, 1, false, SurfaceFormat.Color);
             starTexture.SetData<Color>(new Color[] { Color.White });
@@ -204,8 +205,10 @@ namespace NetRumble
         public void UnloadContent()
         {
             cloudTexture = null;
+#if TRYNOTWORKING
             cloudEffect = null;
             cloudEffectPosition = null;
+#endif
 
             if (starTexture != null)
             {
@@ -241,10 +244,10 @@ namespace NetRumble
         }
 
 
-        #endregion
+#endregion
 
 
-        #region Draw Methods
+#region Draw Methods
 
 
         /// <summary>
@@ -275,10 +278,15 @@ namespace NetRumble
             spriteBatch.Draw(starTexture, starfieldRectangle, backgroundColor);
             spriteBatch.End();
 
+            SpriteEffect myCloudEffect = null;
+#if TRYNOTWORKING
+            myCloudEffect = cloudEffect;
+
             // draw the cloud texture
             cloudEffectPosition.SetValue(this.position);
+#endif
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, 
-                null, null, null, cloudEffect);
+                null, null, null, myCloudEffect);
             spriteBatch.Draw(cloudTexture, starfieldRectangle, null, Color.White, 0.0f,
                 Vector2.Zero, SpriteEffects.None, 1.0f);
             spriteBatch.End();
@@ -334,10 +342,10 @@ namespace NetRumble
         }
 
 
-        #endregion
+#endregion
 
     
-        #region IDisposable Implementation
+#region IDisposable Implementation
 
 
         /// <summary>
@@ -386,7 +394,7 @@ namespace NetRumble
         }
 
 
-        #endregion
+#endregion
     }
 }
 

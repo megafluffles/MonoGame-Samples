@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/Justin/source/repos/MonoGame-Samples2/NetRumble/Content/Fonts/NetRumbleFont.png</SourceFile>
+  <SourceTime>2018-07-19T22:04:19.6316784+10:00</SourceTime>
+  <DestFile>C:/Users/Justin/source/repos/MonoGame-Samples2/NetRumble/Content/Fonts/NetRumbleFont.xnb</DestFile>
+  <DestTime>2018-07-20T16:34:50.008087+10:00</DestTime>
+  <Importer>TextureImporter</Importer>
+  <ImporterTime>2017-03-02T02:05:36+11:00</ImporterTime>
+  <Processor>FontTextureProcessor</Processor>
+  <ProcessorTime>2017-03-02T02:05:36+11:00</ProcessorTime>
+  <Parameters>
+    <Key>FirstCharacter</Key>
+    <Value> </Value>
+  </Parameters>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Color</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

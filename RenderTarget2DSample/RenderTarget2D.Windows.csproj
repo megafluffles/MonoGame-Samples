@@ -67,16 +67,6 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\MonoGame.Framework\MonoGame.Framework.Net.WindowsGL.csproj">
-      <Project>{6d6009f4-0afb-4806-89d7-7945f20270f5}</Project>
-      <Name>MonoGame.Framework.Net.WindowsGL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\MonoGame.Framework\MonoGame.Framework.WindowsGL.csproj">
-      <Project>{7DE47032-A904-4C29-BD22-2D235E8D91BA}</Project>
-      <Name>MonoGame.Framework.WindowsGL</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="..\CompiledContent\Windows\Content\Textures\checker.xnb">
       <Link>Content\checker.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

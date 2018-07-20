@@ -160,8 +160,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\ThirdParty\GamepadConfig\SDL.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="..\..\MonoGame\ThirdParty\GamepadConfig\SDL.dll">
+      <Link>SDL.dll</Link>
     </Content>
     <Content Include="Content\Audio\wav\asteroid_touch.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -208,12 +208,17 @@
     <Content Include="Content\Audio\wav\rocket.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\BloomPostprocess\Effects\BloomCombine.fx" />
+    <Content Include="Content\BloomPostprocess\Effects\BloomExtract.fx" />
+    <Content Include="Content\BloomPostprocess\Effects\GaussianBlur.fx" />
+    <Content Include="Content\Effects\Clouds.fx" />
     <Content Include="Content\Fonts\MenuFont.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Fonts\MessageBox.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Fonts\NetRumbleFont.png" />
     <Content Include="Content\Fonts\NetRumbleFont.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -238,90 +243,123 @@
     <Content Include="Content\Particles\shipSpawn.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\asteroid0.png" />
     <Content Include="Content\Textures\asteroid0.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\asteroid1.png" />
     <Content Include="Content\Textures\asteroid1.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\asteroid2.png" />
     <Content Include="Content\Textures\asteroid2.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\barrierEnd.png" />
     <Content Include="Content\Textures\barrierEnd.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\barrierPurple.png" />
     <Content Include="Content\Textures\barrierPurple.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\barrierRed.png" />
     <Content Include="Content\Textures\barrierRed.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\blank.png" />
     <Content Include="Content\Textures\blank.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\chatAble.png" />
     <Content Include="Content\Textures\chatAble.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\chatMute.png" />
     <Content Include="Content\Textures\chatMute.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\chatTalking.png" />
     <Content Include="Content\Textures\chatTalking.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\clouds.png" />
     <Content Include="Content\Textures\clouds.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\explosion.png" />
     <Content Include="Content\Textures\explosion.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\laser.png" />
     <Content Include="Content\Textures\laser.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\mine.png" />
     <Content Include="Content\Textures\mine.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\Particles\defaultParticle.PNG" />
+    <Content Include="Content\Textures\Particles\particle.png" />
+    <Content Include="Content\Textures\Particles\smoke.png" />
+    <Content Include="Content\Textures\Particles\spark.png" />
+    <Content Include="Content\Textures\powerupDoubleLaser.png" />
     <Content Include="Content\Textures\powerupDoubleLaser.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\powerupRocket.png" />
     <Content Include="Content\Textures\powerupRocket.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\powerupTripleLaser.png" />
     <Content Include="Content\Textures\powerupTripleLaser.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\ready.png" />
     <Content Include="Content\Textures\ready.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\rocket.png" />
     <Content Include="Content\Textures\rocket.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\ship0.png" />
     <Content Include="Content\Textures\ship0.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\ship0Overlay.png" />
     <Content Include="Content\Textures\ship0Overlay.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\ship1.png" />
     <Content Include="Content\Textures\ship1.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\ship1Overlay.png" />
     <Content Include="Content\Textures\ship1Overlay.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\ship2.png" />
     <Content Include="Content\Textures\ship2.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\ship2Overlay.png" />
     <Content Include="Content\Textures\ship2Overlay.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\ship3.png" />
     <Content Include="Content\Textures\ship3.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\ship3Overlay.png" />
     <Content Include="Content\Textures\ship3Overlay.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\shipShields.png" />
     <Content Include="Content\Textures\shipShields.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Textures\title.png" />
     <Content Include="Content\Textures\title.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -337,10 +375,6 @@
     <Content Include="Content\Textures\Particles\spark.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\CompiledContent\Windows\Content\Effects\Clouds.xnb">
-      <Link>Content\Effects\Clouds.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\CompiledContent\Windows\Content\Effects\BloomCombine.xnb">
       <Link>Content\BloomPostprocess\Effects\BloomCombine.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -354,22 +388,75 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="app.config" />
+    <None Include="Content\BloomPostprocess\Effects\BloomCombine.fsh" />
+    <None Include="Content\BloomPostprocess\Effects\BloomCombine.mgcontent" />
+    <None Include="Content\BloomPostprocess\Effects\BloomCombine.xnb" />
+    <None Include="Content\BloomPostprocess\Effects\BloomExtract.fsh" />
+    <None Include="Content\BloomPostprocess\Effects\BloomExtract.mgcontent" />
+    <None Include="Content\BloomPostprocess\Effects\BloomExtract.xnb" />
+    <None Include="Content\BloomPostprocess\Effects\GaussianBlur.fsh" />
+    <None Include="Content\BloomPostprocess\Effects\GaussianBlur.mgcontent" />
+    <None Include="Content\BloomPostprocess\Effects\GaussianBlur.xnb" />
+    <None Include="Content\Content.mgcb" />
+    <Content Include="Content\Effects\Clouds.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Content\Effects\Clouds.fsh" />
+    <None Include="Content\Effects\Clouds.mgcontent" />
+    <None Include="Content\Fonts\MenuFont.mgcontent" />
+    <None Include="Content\Fonts\MenuFont.spritefont" />
+    <None Include="Content\Fonts\MessageBox.mgcontent" />
+    <None Include="Content\Fonts\MessageBox.spritefont" />
+    <None Include="Content\Fonts\NetRumbleFont.mgcontent" />
+    <None Include="Content\Textures\asteroid0.mgcontent" />
+    <None Include="Content\Textures\asteroid1.mgcontent" />
+    <None Include="Content\Textures\asteroid2.mgcontent" />
+    <None Include="Content\Textures\barrierEnd.mgcontent" />
+    <None Include="Content\Textures\barrierPurple.mgcontent" />
+    <None Include="Content\Textures\barrierRed.mgcontent" />
+    <None Include="Content\Textures\blank.mgcontent" />
+    <None Include="Content\Textures\chatAble.mgcontent" />
+    <None Include="Content\Textures\chatMute.mgcontent" />
+    <None Include="Content\Textures\chatTalking.mgcontent" />
+    <None Include="Content\Textures\clouds.mgcontent" />
+    <None Include="Content\Textures\explosion.mgcontent" />
+    <None Include="Content\Textures\laser.mgcontent" />
+    <None Include="Content\Textures\mine.mgcontent" />
+    <None Include="Content\Textures\Particles\defaultParticle.mgcontent" />
+    <None Include="Content\Textures\Particles\particle.mgcontent" />
+    <None Include="Content\Textures\Particles\smoke.mgcontent" />
+    <None Include="Content\Textures\Particles\spark.mgcontent" />
+    <None Include="Content\Textures\powerupDoubleLaser.mgcontent" />
+    <None Include="Content\Textures\powerupRocket.mgcontent" />
+    <None Include="Content\Textures\powerupTripleLaser.mgcontent" />
+    <None Include="Content\Textures\ready.mgcontent" />
+    <None Include="Content\Textures\rocket.mgcontent" />
+    <None Include="Content\Textures\ship0.mgcontent" />
+    <None Include="Content\Textures\ship0Overlay.mgcontent" />
+    <None Include="Content\Textures\ship1.mgcontent" />
+    <None Include="Content\Textures\ship1Overlay.mgcontent" />
+    <None Include="Content\Textures\ship2.mgcontent" />
+    <None Include="Content\Textures\ship2Overlay.mgcontent" />
+    <None Include="Content\Textures\ship3.mgcontent" />
+    <None Include="Content\Textures\ship3Overlay.mgcontent" />
+    <None Include="Content\Textures\shipShields.mgcontent" />
+    <None Include="Content\Textures\title.mgcontent" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Effects\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\MonoGame.Framework\MonoGame.Framework.Net.WindowsGL.csproj">
+    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Net.WindowsGL.csproj">
       <Project>{6d6009f4-0afb-4806-89d7-7945f20270f5}</Project>
       <Name>MonoGame.Framework.Net.WindowsGL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\MonoGame.Framework\MonoGame.Framework.WindowsGL.csproj">
-      <Project>{c7b3444e-5249-493e-8522-926a400e301b}</Project>
+    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.WindowsGL.csproj">
+      <Project>{6d75e618-19ca-4c51-9546-f10965fbc0b8}</Project>
       <Name>MonoGame.Framework.WindowsGL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ThirdParty\Lidgren.Network\Lidgren.Network.Windows.csproj">
-      <Project>{AE483C29-042E-4226-BA52-D247CE7676DA}</Project>
-      <Name>Lidgren.Network.Windows</Name>
+    <ProjectReference Include="..\..\MonoGame\ThirdParty\Lidgren.Network\Lidgren.Network.WindowsGL.csproj">
+      <Project>{ae483c29-042e-4226-ba52-d247ce7676da}</Project>
+      <Name>Lidgren.Network.WindowsGL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />

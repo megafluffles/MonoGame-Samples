@@ -122,10 +122,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\MonoGame.Framework\MonoGame.Framework.WindowsGL.csproj">
-      <Project>{7DE47032-A904-4C29-BD22-2D235E8D91BA}</Project>
-      <Name>MonoGame.Framework.WindowsGL</Name>
-    </ProjectReference>
     <ProjectReference Include="ParticleSettings\ParticleSettings.Windows.csproj">
       <Project>{3388FF68-6F15-4F36-B226-7823E5309E92}</Project>
       <Name>ParticleSettings.Windows</Name>

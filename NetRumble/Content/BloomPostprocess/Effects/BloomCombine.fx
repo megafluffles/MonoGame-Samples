@@ -46,6 +46,6 @@ technique BloomCombine
 {
     pass Pass1
     {
-        PixelShader = compile ps_2_0 PixelShaderF();
+        PixelShader = compile ps_4_0_level_9_1 PixelShaderF();
     }
 }
