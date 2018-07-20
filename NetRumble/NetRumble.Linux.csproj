@@ -222,6 +222,7 @@
     <None Include="Content\Effects\Clouds.fx">
       <Link>Content\Effects\Clouds.fx</Link>
     </None>
+    <None Include="Content\Content.mgcb" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
