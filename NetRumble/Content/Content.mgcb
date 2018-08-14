@@ -15,20 +15,17 @@
 
 #begin BloomPostprocess/Effects/BloomCombine.fx
 /importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
+/processor:PassThroughProcessor
 /build:BloomPostprocess/Effects/BloomCombine.fx
 
 #begin BloomPostprocess/Effects/BloomExtract.fx
 /importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
+/processor:PassThroughProcessor
 /build:BloomPostprocess/Effects/BloomExtract.fx
 
 #begin BloomPostprocess/Effects/GaussianBlur.fx
 /importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
+/processor:PassThroughProcessor
 /build:BloomPostprocess/Effects/GaussianBlur.fx
 
 #begin Audio/wav/asteroid_touch.wav

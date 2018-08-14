@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>/home/justin/Source/megafluffles/MonoGame-Samples/NetRumble/Content/Audio/wav/fire_laser3.wav</SourceFile>
-  <SourceTime>2018-07-18T19:09:02+10:00</SourceTime>
+  <SourceTime>2018-08-14T20:32:05.644338+10:00</SourceTime>
   <DestFile>/home/justin/Source/megafluffles/MonoGame-Samples/NetRumble/Content/Audio/wav/fire_laser3.xnb</DestFile>
-  <DestTime>2018-07-21T07:16:20.904002+10:00</DestTime>
+  <DestTime>2018-08-14T21:46:52.582543+10:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2018-05-01T10:50:42.614922+10:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

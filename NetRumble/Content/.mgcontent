@@ -4,6 +4,9 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>/home/justin/Source/megafluffles/MonoGame-Samples/NetRumble/Content/BloomPostprocess/Effects/GaussianBlur.fx</File>
+    <File>/home/justin/Source/megafluffles/MonoGame-Samples/NetRumble/Content/BloomPostprocess/Effects/BloomExtract.fx</File>
+    <File>/home/justin/Source/megafluffles/MonoGame-Samples/NetRumble/Content/BloomPostprocess/Effects/BloomCombine.fx</File>
     <File>/home/justin/Source/megafluffles/MonoGame-Samples/NetRumble/Content/Audio/wav/asteroid_touch.wav</File>
     <File>/home/justin/Source/megafluffles/MonoGame-Samples/NetRumble/Content/Audio/wav/explosion_large.wav</File>
     <File>/home/justin/Source/megafluffles/MonoGame-Samples/NetRumble/Content/Audio/wav/explosion_medium.wav</File>
