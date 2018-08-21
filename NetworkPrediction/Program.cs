@@ -53,9 +53,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Net;
 
-using MonoMac.Foundation;
-using MonoMac.AppKit;
-using MonoMac.ObjCRuntime;
+//using MonoMac.Foundation;
+//using MonoMac.AppKit;
+//using MonoMac.ObjCRuntime;
 
 #endregion
 
@@ -71,29 +71,33 @@ namespace NetworkPrediction
 		/// </summary>
 		static void Main (string[] args)
 		{
-			NSApplication.Init ();
+			using (NetworkPredictionGame game = new NetworkPredictionGame())
+            {
+                game.Run();
+            }
+			//NSApplication.Init ();
 			
-			using (var p = new NSAutoreleasePool ()) {
-				NSApplication.SharedApplication.Delegate = new AppDelegate();
-				NSApplication.Main(args);
-			}
+			//using (var p = new NSAutoreleasePool ()) {
+			//	NSApplication.SharedApplication.Delegate = new AppDelegate();
+			//	NSApplication.Main(args);
+			//}
 		}
 	}
 	
-	class AppDelegate : NSApplicationDelegate
-	{
-		NetworkPredictionGame game;
-		public override void FinishedLaunching (MonoMac.Foundation.NSObject notification)
-		{
-			game = new NetworkPredictionGame();
-			game.Run();
-		}
+	//class AppDelegate : NSApplicationDelegate
+	//{
+	//	NetworkPredictionGame game;
+	//	public override void FinishedLaunching (MonoMac.Foundation.NSObject notification)
+	//	{
+	//		game = new NetworkPredictionGame();
+	//		game.Run();
+	//	}
 		
-		public override bool ApplicationShouldTerminateAfterLastWindowClosed (NSApplication sender)
-		{
-			return true;
-		}
-	}	
+	//	public override bool ApplicationShouldTerminateAfterLastWindowClosed (NSApplication sender)
+	//	{
+	//		return true;
+	//	}
+	//}	
 	
 	#endregion
 }

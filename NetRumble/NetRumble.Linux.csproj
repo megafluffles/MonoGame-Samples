@@ -46,6 +46,24 @@
     <Reference Include="MonoGame.Framework.Net">
       <HintPath>..\..\MonoGame\MonoGame.Framework\bin\Linux\AnyCPU\Debug\MonoGame.Framework.Net.dll</HintPath>
     </Reference>
+    <Reference Include="Lidgren.Network">
+      <HintPath>..\..\MonoGame\ThirdParty\Lidgren.Network\bin\Linux\AnyCPU\Debug\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\..\MonoGame\MonoGame.Framework\bin\Linux\AnyCPU\Debug\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework.Net">
+      <HintPath>..\..\MonoGame\MonoGame.Framework\bin\Linux\AnyCPU\Debug\MonoGame.Framework.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Lidgren.Network">
+      <HintPath>..\..\MonoGame\ThirdParty\Lidgren.Network\bin\Linux\AnyCPU\Debug\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\..\MonoGame\MonoGame.Framework\bin\Linux\AnyCPU\Debug\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework.Net">
+      <HintPath>..\..\MonoGame\MonoGame.Framework\bin\Linux\AnyCPU\Debug\MonoGame.Framework.Net.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist">
