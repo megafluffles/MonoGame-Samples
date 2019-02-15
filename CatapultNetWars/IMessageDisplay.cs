@@ -11,7 +11,7 @@
 using Microsoft.Xna.Framework;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
     /// <summary>
     /// Interface used to display notification messages when interesting events occur,

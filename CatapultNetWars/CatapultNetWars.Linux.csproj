@@ -1,17 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0BCF8950-A28D-4688-BA92-85BD49637ED0}</ProjectGuid>
+    <ProjectGuid>{DC0225F8-BCEA-4426-907C-60D40F78DA52}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CatapultNetWars</RootNamespace>
     <AssemblyName>CatapultNetWars</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -302,6 +303,7 @@
   </Target>
   -->
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Content\Sounds\BoulderHit.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -334,5 +336,27 @@
       <Project>{1B738549-0449-4504-B978-7BFC347E3F3C}</Project>
       <Name>MonoGame.Framework.Net.Linux</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Catapult\" />
+    <Folder Include="Content\Fonts\" />
+    <Folder Include="Content\Textures\Ammo\" />
+    <Folder Include="Content\Textures\Backgrounds\" />
+    <Folder Include="Content\Textures\Catapults\Blue\blueDestroyed\" />
+    <Folder Include="Content\Textures\Catapults\Blue\blueFire\" />
+    <Folder Include="Content\Textures\Catapults\Blue\blueIdle\" />
+    <Folder Include="Content\Textures\Catapults\Blue\bluePullback\" />
+    <Folder Include="Content\Textures\Catapults\Fire_Miss\" />
+    <Folder Include="Content\Textures\Catapults\Hit_Smoke\" />
+    <Folder Include="Content\Textures\Catapults\Red\redDestroyed\" />
+    <Folder Include="Content\Textures\Catapults\Red\redFire\" />
+    <Folder Include="Content\Textures\Catapults\Red\redIdle\" />
+    <Folder Include="Content\Textures\Catapults\Red\redPullback\" />
+    <Folder Include="Content\Textures\HUD\" />
+    <Folder Include="Networking\" />
+    <Folder Include="Players\" />
+    <Folder Include="ScreenManager\" />
+    <Folder Include="Screens\" />
+    <Folder Include="Utility\" />
   </ItemGroup>
 </Project>

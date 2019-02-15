@@ -26,7 +26,7 @@ using Microsoft.Xna.Framework.Net;
 
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
 	class GameplayScreen : GameScreen
 	{
@@ -35,8 +35,8 @@ namespace CatapultGame
 		enum MessageType : byte
 		{
 			NewGame = 1,
-			CatapultFiring = 2,
-			CatapultAiming = 3,
+			CatapaultFiring = 2,
+			CatapaultAiming = 3,
 			UpdateEnvironment = 4,
 		}
 
@@ -192,7 +192,7 @@ namespace CatapultGame
 			float elapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
 			// Check it one of the players reached 5 and stop the game
-			if ((playerOne.Catapult.GameOver || playerTwo.Catapult.GameOver) &&
+			if ((playerOne.Catapault.GameOver || playerTwo.Catapault.GameOver) &&
  				(gameOver == false)) {
 
 				gameOver = true;
@@ -225,10 +225,10 @@ namespace CatapultGame
 
 			// If Reset flag raised and both catapults are not animating - 
 			// active catapult finished the cycle, new turn!
-			if ((playerOne.Catapult.CurrentState == CatapultState.Reset ||
-				playerTwo.Catapult.CurrentState == CatapultState.Reset) &&
-				!(playerOne.Catapult.AnimationRunning ||
-				playerTwo.Catapult.AnimationRunning)) {
+			if ((playerOne.Catapault.CurrentState == CatapaultState.Reset ||
+				playerTwo.Catapault.CurrentState == CatapaultState.Reset) &&
+				!(playerOne.Catapault.AnimationRunning ||
+				playerTwo.Catapault.AnimationRunning)) {
 
 				changeTurn = true;
 
@@ -236,17 +236,17 @@ namespace CatapultGame
 					playerOne.IsActive = false;
 					playerTwo.IsActive = true;
 					isFirstPlayerTurn = false;
-					playerOne.Catapult.CurrentState = CatapultState.Idle;
+					playerOne.Catapault.CurrentState = CatapaultState.Idle;
 					if (playerTwo.IsAI)
-						playerTwo.Catapult.CurrentState = CatapultState.Aiming;
+						playerTwo.Catapault.CurrentState = CatapaultState.Aiming;
 					else
-						playerTwo.Catapult.CurrentState = CatapultState.Idle;
+						playerTwo.Catapault.CurrentState = CatapaultState.Idle;
 				} else { //It was an AI turn
 					playerOne.IsActive = true;
 					playerTwo.IsActive = false;
 					isFirstPlayerTurn = true;
-					playerTwo.Catapult.CurrentState = CatapultState.Idle;
-					playerOne.Catapult.CurrentState = CatapultState.Idle;
+					playerTwo.Catapault.CurrentState = CatapaultState.Idle;
+					playerOne.Catapault.CurrentState = CatapaultState.Idle;
 				}
 			}
 
@@ -255,7 +255,7 @@ namespace CatapultGame
 				wind = new Vector2 (random.Next (-1, 2), random.Next (minWind, maxWind + 1));
 
 				// Set new wind value to the players and
-				playerOne.Catapult.Wind = playerTwo.Catapult.Wind = wind.X > 0 ? wind.Y : -wind.Y;
+				playerOne.Catapault.Wind = playerTwo.Catapault.Wind = wind.X > 0 ? wind.Y : -wind.Y;
 				changeTurn = false;
 			}
 
@@ -327,8 +327,8 @@ namespace CatapultGame
 			if (input.IsPauseGame (null)) {
 				PauseCurrentGame ();
 			} else if (isFirstPlayerTurn &&
-					(playerOne.Catapult.CurrentState == CatapultState.Idle ||
-					playerOne.Catapult.CurrentState == CatapultState.Aiming)) {
+					(playerOne.Catapault.CurrentState == CatapaultState.Idle ||
+					playerOne.Catapault.CurrentState == CatapaultState.Aiming)) {
 
 				// First we try with mouse input
 				playerOne.HandleInput (input);
@@ -344,8 +344,8 @@ namespace CatapultGame
 					playerOne.HandleInput (gestureSample);
 				}
 			} else if (!isFirstPlayerTurn &&
-					(playerTwo.Catapult.CurrentState == CatapultState.Idle ||
-					playerTwo.Catapult.CurrentState == CatapultState.Aiming)) {
+					(playerTwo.Catapault.CurrentState == CatapaultState.Idle ||
+					playerTwo.Catapault.CurrentState == CatapaultState.Aiming)) {
 
 				// First we try with mouse input
 				playerTwo.HandleInput (input);
@@ -382,21 +382,21 @@ namespace CatapultGame
 				}
 			}
 
-			if (playerOne.Catapult.CurrentState == CatapultState.Aiming) {
-				SendCatapultInfo(MessageType.CatapultAiming, playerOne);
+			if (playerOne.Catapault.CurrentState == CatapaultState.Aiming) {
+				SendCatapaultInfo(MessageType.CatapaultAiming, playerOne);
 			}
 
-			if (playerOne.Catapult.CurrentState == CatapultState.Firing) {
+			if (playerOne.Catapault.CurrentState == CatapaultState.Firing) {
 
-				SendCatapultInfo(MessageType.CatapultFiring, playerOne);
+				SendCatapaultInfo(MessageType.CatapaultFiring, playerOne);
 			}
 
-			if (playerTwo.Catapult.CurrentState == CatapultState.Aiming) {
-				SendCatapultInfo(MessageType.CatapultAiming, playerTwo);
+			if (playerTwo.Catapault.CurrentState == CatapaultState.Aiming) {
+				SendCatapaultInfo(MessageType.CatapaultAiming, playerTwo);
 			}
 
-			if (playerTwo.Catapult.CurrentState == CatapultState.Firing) {
-				SendCatapultInfo(MessageType.CatapultFiring, playerTwo);
+			if (playerTwo.Catapault.CurrentState == CatapaultState.Firing) {
+				SendCatapaultInfo(MessageType.CatapaultFiring, playerTwo);
 			}
 
 			// Pump the underlying session object.
@@ -412,11 +412,11 @@ namespace CatapultGame
 			}
 		}
 
-		void SendCatapultInfo (MessageType messageType,  Human player)
+		void SendCatapaultInfo (MessageType messageType,  Human player)
 		{
 			packetWriter.Write((int)messageType);
-			catapultInfoVector.X = player.Catapult.ShotStrength;
-			catapultInfoVector.Y = player.Catapult.ShotVelocity;
+			catapultInfoVector.X = player.Catapault.ShotStrength;
+			catapultInfoVector.Y = player.Catapault.ShotVelocity;
 			catapultInfoVector.Z = player.ArrowScale;
 			packetWriter.Write(catapultInfoVector);
 
@@ -448,44 +448,44 @@ namespace CatapultGame
 				case MessageType.NewGame:
 					//ReceiveNewNetworkedGame();
 					break;
-				case MessageType.CatapultAiming:
+				case MessageType.CatapaultAiming:
 
 					if (isFirstPlayerTurn && !NetworkSession.IsHost) {
-						playerOne.Catapult.CurrentState = CatapultState.Aiming;
+						playerOne.Catapault.CurrentState = CatapaultState.Aiming;
 						playerOne.isDragging = true;
 
 						catapultInfoVector = packetReader.ReadVector3();
 
-						playerOne.Catapult.ShotStrength = catapultInfoVector.X;
-						playerOne.Catapult.ShotVelocity = catapultInfoVector.Y;
+						playerOne.Catapault.ShotStrength = catapultInfoVector.X;
+						playerOne.Catapault.ShotVelocity = catapultInfoVector.Y;
 						playerOne.ArrowScale = catapultInfoVector.Z;
 
 					}
 					if (!isFirstPlayerTurn && NetworkSession.IsHost) {
 
-						playerTwo.Catapult.CurrentState = CatapultState.Aiming;
+						playerTwo.Catapault.CurrentState = CatapaultState.Aiming;
 						playerTwo.isDragging = true;
 
 						catapultInfoVector = packetReader.ReadVector3();
 
-						playerTwo.Catapult.ShotStrength = catapultInfoVector.X;
-						playerTwo.Catapult.ShotVelocity = catapultInfoVector.Y;
+						playerTwo.Catapault.ShotStrength = catapultInfoVector.X;
+						playerTwo.Catapault.ShotVelocity = catapultInfoVector.Y;
 						playerTwo.ArrowScale = catapultInfoVector.Z;
 
 					}
 					break;
-				case MessageType.CatapultFiring:
+				case MessageType.CatapaultFiring:
 
 					if (isFirstPlayerTurn  && !NetworkSession.IsHost) {
 						catapultInfoVector = packetReader.ReadVector3();
-						playerOne.Catapult.Fire (catapultInfoVector.Y);
-						playerOne.Catapult.CurrentState = CatapultState.Firing;
+						playerOne.Catapault.Fire (catapultInfoVector.Y);
+						playerOne.Catapault.CurrentState = CatapaultState.Firing;
 						playerOne.ResetDragState();
 					}
 					if (!isFirstPlayerTurn  && NetworkSession.IsHost) {
 						catapultInfoVector = packetReader.ReadVector3();
-						playerTwo.Catapult.Fire (catapultInfoVector.Y);
-						playerTwo.Catapult.CurrentState = CatapultState.Firing;
+						playerTwo.Catapault.Fire (catapultInfoVector.Y);
+						playerTwo.Catapault.CurrentState = CatapaultState.Firing;
 						playerTwo.ResetDragState();
 					}
 					break;
@@ -494,7 +494,7 @@ namespace CatapultGame
 					cloud1Position = packetReader.ReadVector2();
 					cloud2Position = packetReader.ReadVector2();
 					// Set new wind value to the players and
-					playerOne.Catapult.Wind = playerTwo.Catapult.Wind = wind.X > 0 ? wind.Y : -wind.Y;
+					playerOne.Catapault.Wind = playerTwo.Catapault.Wind = wind.X > 0 ? wind.Y : -wind.Y;
 					break;
 				}
 			}
@@ -711,7 +711,7 @@ namespace CatapultGame
 
 			if (isDragging) {
 				isDragging = false;
-				playerOne.Catapult.CurrentState = CatapultState.Idle;
+				playerOne.Catapault.CurrentState = CatapaultState.Idle;
 			}
 
 			ScreenManager.AddScreen (pauseMenuBackground, null);
@@ -729,7 +729,7 @@ namespace CatapultGame
 			wind = Vector2.Zero;
 			isFirstPlayerTurn = false;
 			changeTurn = true;
-			playerTwo.Catapult.CurrentState = CatapultState.Reset;
+			playerTwo.Catapault.CurrentState = CatapaultState.Reset;
 		}
 #endregion
 	}

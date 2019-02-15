@@ -1,6 +1,6 @@
 #region File Description
 //-----------------------------------------------------------------------------
-// Catapult.cs
+// Catapault.cs
 //
 // Microsoft XNA Community Game Platform
 // Copyright (C) Microsoft Corporation. All rights reserved.
@@ -28,11 +28,11 @@ using Microsoft.Xna.Framework.Input.Touch;
 using System.Xml.Linq;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
-    #region Catapult states definition enum
+    #region Catapault states definition enum
     [Flags]
-    public enum CatapultState
+    public enum CatapaultState
     {
         Idle = 0x0,
         Aiming = 0x1,
@@ -45,11 +45,11 @@ namespace CatapultGame
     }
     #endregion
 
-    public class Catapult : DrawableGameComponent
+    public class Catapault : DrawableGameComponent
     {
         #region Variables/Fields and Properties
         // Hold what the game to which the catapult belongs
-        CatapultGame curGame = null;
+        CatapaultGame curGame = null;
 
         SpriteBatch spriteBatch;
         Random random;
@@ -77,14 +77,14 @@ namespace CatapultGame
         const float gravity = 500f;
 
         // State of the catapult during its last update
-        CatapultState lastUpdateState = CatapultState.Idle;
+        CatapaultState lastUpdateState = CatapaultState.Idle;
 
         // Used to stall animations
         int stallUpdateCycles;
 
-        // Current state of the Catapult
-        CatapultState currentState;
-        public CatapultState CurrentState
+        // Current state of the Catapault
+        CatapaultState currentState;
+        public CatapaultState CurrentState
         {
             get { return currentState; }
             set { currentState = value; }
@@ -143,19 +143,19 @@ namespace CatapultGame
         #endregion
 
         #region Initialization
-        public Catapult(Game game)
+        public Catapault(Game game)
             : base(game)
         {
-            curGame = (CatapultGame)game;
+            curGame = (CatapaultGame)game;
         }
 
-        public Catapult(Game game, SpriteBatch screenSpriteBatch,
+        public Catapault(Game game, SpriteBatch screenSpriteBatch,
           string IdleTexture,
-          Vector2 CatapultPosition, SpriteEffects SpriteEffect, bool IsAI)
+          Vector2 CatapaultPosition, SpriteEffects SpriteEffect, bool IsAI)
             : this(game)
         {
             idleTextureName = IdleTexture;
-            catapultPosition = CatapultPosition;
+            catapultPosition = CatapaultPosition;
             spriteEffects = SpriteEffect;
             spriteBatch = screenSpriteBatch;
             isAI = IsAI;
@@ -172,18 +172,18 @@ namespace CatapultGame
             // Define initial state of the catapult
             IsActive = true;
             AnimationRunning = false;
-            currentState = CatapultState.Idle;
+            currentState = CatapaultState.Idle;
             stallUpdateCycles = 0;
 			
 			// Load multiple animations form XML definition
 			XDocument doc = null;
 #if ANDROID
-			using(var stream = Game.Activity.Assets.Open(@"Content/Textures/Catapults/AnimationsDef.xml"))
+			using(var stream = Game.Activity.Assets.Open(@"Content/Textures/Catapaults/AnimationsDef.xml"))
 			{
 				doc = XDocument.Load(stream);
 			}
 #else			
-            doc = XDocument.Load("Content/Textures/Catapults/AnimationsDef.xml");            
+            doc = XDocument.Load("Content/Textures/Catapaults/AnimationsDef.xml");            
 #endif				            
             XName name = XName.Get("Definition");
             var definitions = doc.Document.Descendants(name);
@@ -264,7 +264,7 @@ namespace CatapultGame
         {
             bool isGroundHit;
             bool startStall;
-            CatapultState postUpdateStateChange = 0;
+            CatapaultState postUpdateStateChange = 0;
 
             if (gameTime == null)
                 throw new ArgumentNullException("gameTime");
@@ -278,11 +278,11 @@ namespace CatapultGame
                 
             switch (currentState)
             {
-                case CatapultState.Idle:
+                case CatapaultState.Idle:
                     // Nothing to do
                     break;
-                case CatapultState.Aiming:
-                    if (lastUpdateState != CatapultState.Aiming)
+                case CatapaultState.Aiming:
+                    if (lastUpdateState != CatapaultState.Aiming)
                     {
                         AudioManager.PlaySound("ropeStretch", true);
 
@@ -305,20 +305,20 @@ namespace CatapultGame
                         animations["Aim"].Update();
                         startStall = AimReachedShotStrength();
                         currentState = (startStall) ? 
-                            CatapultState.Stalling : CatapultState.Aiming;
+                            CatapaultState.Stalling : CatapaultState.Aiming;
                     }
                     break;
-                case CatapultState.Stalling:
+                case CatapaultState.Stalling:
                     if (stallUpdateCycles-- <= 0)
                     {
                         // We've finished stalling, fire the projectile
                         Fire(ShotVelocity);
-                        postUpdateStateChange = CatapultState.Firing;
+                        postUpdateStateChange = CatapaultState.Firing;
                     }
                     break;
-                case CatapultState.Firing:
+                case CatapaultState.Firing:
                     // Progress Fire animation
-                    if (lastUpdateState != CatapultState.Firing)
+                    if (lastUpdateState != CatapaultState.Firing)
                     {
                         AudioManager.StopSound("ropeStretch");
                         AudioManager.PlaySound("catapultFire");
@@ -332,12 +332,12 @@ namespace CatapultGame
                     if (animations["Fire"].FrameIndex == splitFrames["Fire"])
                     {
                         postUpdateStateChange = 
-                            currentState | CatapultState.ProjectileFlying;
+                            currentState | CatapaultState.ProjectileFlying;
                         projectile.ProjectilePosition = 
                             projectile.ProjectileStartPosition;
                     }
                     break;
-                case CatapultState.Firing | CatapultState.ProjectileFlying:
+                case CatapaultState.Firing | CatapaultState.ProjectileFlying:
                     // Progress Fire animation                    
                     animations["Fire"].Update();
 
@@ -348,27 +348,27 @@ namespace CatapultGame
                     if (isGroundHit)
                     {
                         // Start hit sequence
-                        postUpdateStateChange = CatapultState.ProjectileHit;
+                        postUpdateStateChange = CatapaultState.ProjectileHit;
                         animations["fireMiss"].PlayFromFrameIndex(0);
                     }
                     break;
-                case CatapultState.ProjectileFlying:
+                case CatapaultState.ProjectileFlying:
                     // Update projectile velocity & position in flight
                     projectile.UpdateProjectileFlightData(gameTime, wind, 
                         gravity, out isGroundHit);
                     if (isGroundHit)
                     {
                         // Start hit sequence
-                        postUpdateStateChange = CatapultState.ProjectileHit;
+                        postUpdateStateChange = CatapaultState.ProjectileHit;
                         animations["fireMiss"].PlayFromFrameIndex(0);
                     }
 
                     break;
-                case CatapultState.ProjectileHit:
+                case CatapaultState.ProjectileHit:
                     // Check hit on ground impact
                     if (!CheckHit())
                     {
-                        if (lastUpdateState != CatapultState.ProjectileHit)
+                        if (lastUpdateState != CatapaultState.ProjectileHit)
                         {
 //                            VibrateController.Default.Start(
 //                                TimeSpan.FromMilliseconds(100));
@@ -380,14 +380,14 @@ namespace CatapultGame
                         // Hit animation finished playing
                         if (animations["fireMiss"].IsActive == false)
                         {
-                            postUpdateStateChange = CatapultState.Reset;
+                            postUpdateStateChange = CatapaultState.Reset;
                         }
 
                         animations["fireMiss"].Update();
                     }
                     else
                     {
-                        // Catapult hit - start longer vibration on any catapult hit 
+                        // Catapault hit - start longer vibration on any catapult hit 
                         // Remember that the call to "CheckHit" updates the catapult's
                         // state to "Hit"
 //                        VibrateController.Default.Start(
@@ -395,7 +395,7 @@ namespace CatapultGame
                     }
 
                     break;
-                case CatapultState.Hit:
+                case CatapaultState.Hit:
                     // Progress hit animation
                     if ((animations["Destroyed"].IsActive == false) &&
                         (animations["hitSmoke"].IsActive == false))
@@ -406,14 +406,14 @@ namespace CatapultGame
                             break;
                         }
 
-                        postUpdateStateChange = CatapultState.Reset;
+                        postUpdateStateChange = CatapaultState.Reset;
                     }
 
                     animations["Destroyed"].Update();
                     animations["hitSmoke"].Update();
 
                     break;
-                case CatapultState.Reset:
+                case CatapaultState.Reset:
                     AnimationRunning = false;
                     break;
                 default:
@@ -469,35 +469,35 @@ namespace CatapultGame
             // before updating animations properly
             switch (lastUpdateState)
             {
-                case CatapultState.Idle:
-                    DrawIdleCatapult();
+                case CatapaultState.Idle:
+                    DrawIdleCatapault();
                     break;
-                case CatapultState.Aiming:
-                case CatapultState.Stalling:
+                case CatapaultState.Aiming:
+                case CatapaultState.Stalling:
                     animations["Aim"].Draw(spriteBatch, catapultPosition,
                         spriteEffects);
                     break;
-                case CatapultState.Firing:
+                case CatapaultState.Firing:
                     animations["Fire"].Draw(spriteBatch, catapultPosition,
                         spriteEffects);
                     break;
-                case CatapultState.Firing | CatapultState.ProjectileFlying:
-                case CatapultState.ProjectileFlying:
+                case CatapaultState.Firing | CatapaultState.ProjectileFlying:
+                case CatapaultState.ProjectileFlying:
                     animations["Fire"].Draw(spriteBatch, catapultPosition,
                         spriteEffects);
 
                     projectile.Draw(gameTime);
                     break;
-                case CatapultState.ProjectileHit:
+                case CatapaultState.ProjectileHit:
                     // Draw the catapult
-                    DrawIdleCatapult();
+                    DrawIdleCatapault();
 
                     // Projectile Hit animation
                     animations["fireMiss"].Draw(spriteBatch,
                         projectile.ProjectileHitPosition, spriteEffects);
                     break;
-                case CatapultState.Hit:
-                    // Catapult hit animation
+                case CatapaultState.Hit:
+                    // Catapault hit animation
                     animations["Destroyed"].Draw(spriteBatch, catapultPosition,
                         spriteEffects);
 
@@ -505,8 +505,8 @@ namespace CatapultGame
                     animations["hitSmoke"].Draw(spriteBatch, catapultPosition,
                         spriteEffects);
                     break;
-                case CatapultState.Reset:
-                    DrawIdleCatapult();
+                case CatapaultState.Reset:
+                    DrawIdleCatapault();
                     break;
                 default:
                     break;
@@ -525,7 +525,7 @@ namespace CatapultGame
             AnimationRunning = true;
             animations["Destroyed"].PlayFromFrameIndex(0);
             animations["hitSmoke"].PlayFromFrameIndex(0);
-            currentState = CatapultState.Hit;
+            currentState = CatapaultState.Hit;
         }
         #endregion
 
@@ -557,14 +557,14 @@ namespace CatapultGame
             BoundingBox selfBox = new BoundingBox(min, max);
 
             // Check enemy - create a bounding box around the enemy
-            min = new Vector3(enemy.Catapult.Position, 0);
-            max = new Vector3(enemy.Catapult.Position +
+            min = new Vector3(enemy.Catapault.Position, 0);
+            max = new Vector3(enemy.Catapault.Position +
                 new Vector2(animations["Fire"].FrameSize.X,
                     animations["Fire"].FrameSize.Y), 0);
             BoundingBox enemyBox = new BoundingBox(min, max);
 
             // Check self hit
-            if (sphere.Intersects(selfBox) && currentState != CatapultState.Hit)
+            if (sphere.Intersects(selfBox) && currentState != CatapaultState.Hit)
             {
                 AudioManager.PlaySound("catapultExplosion");
                 // Launch hit animation sequence on self
@@ -574,15 +574,15 @@ namespace CatapultGame
             }
             // Check if enemy was hit
             else if (sphere.Intersects(enemyBox)
-                && enemy.Catapult.CurrentState != CatapultState.Hit
-                && enemy.Catapult.CurrentState != CatapultState.Reset)
+                && enemy.Catapault.CurrentState != CatapaultState.Hit
+                && enemy.Catapault.CurrentState != CatapaultState.Reset)
             {
                 AudioManager.PlaySound("catapultExplosion");
                 // Launch enemy hit animaton
-                enemy.Catapult.Hit();
+                enemy.Catapault.Hit();
                 self.Score++;
                 bRes = true;
-                currentState = CatapultState.Reset;
+                currentState = CatapaultState.Reset;
             }
 
             return bRes;
@@ -591,7 +591,7 @@ namespace CatapultGame
         /// <summary>
         /// Draw catapult in Idle state
         /// </summary>
-        private void DrawIdleCatapult()
+        private void DrawIdleCatapault()
         {
             spriteBatch.Draw(idleTexture, catapultPosition, null, Color.White,
               0.0f, Vector2.Zero, 1.0f,

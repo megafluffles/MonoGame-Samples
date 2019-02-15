@@ -25,7 +25,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
     class Projectile : DrawableGameComponent
     {

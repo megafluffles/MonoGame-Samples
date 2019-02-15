@@ -9,10 +9,10 @@ using Android.OS;
 using Microsoft.Xna.Framework;
 using Android.Content.PM;
 
-namespace CatapultWarsNet
+namespace CatapaultWarsNet
 {
 	
-	[Activity (Label = "CatapultWarsNet"
+	[Activity (Label = "CatapaultWarsNet"
 	           , MainLauncher = true
 	           ,Icon = "@drawable/icon"
 	           , Theme = "@style/Theme.Splash"
@@ -23,8 +23,8 @@ namespace CatapultWarsNet
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-			CatapultGame.CatapultGame.Activity = this;
-			var g = new CatapultGame.CatapultGame();
+			CatapaultGame.CatapaultGame.Activity = this;
+			var g = new CatapaultGame.CatapaultGame();
 			SetContentView(g.Window);
 			g.Run();
 		}

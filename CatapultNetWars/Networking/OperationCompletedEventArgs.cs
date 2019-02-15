@@ -11,7 +11,7 @@
 using System;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
     /// <summary>
     /// Custom EventArgs class used by the NetworkBusyScreen.OperationCompleted event.

@@ -17,7 +17,7 @@ using Microsoft.Xna.Framework;
 using GameStateManagement;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
     class BackgroundScreen : GameScreen
     {

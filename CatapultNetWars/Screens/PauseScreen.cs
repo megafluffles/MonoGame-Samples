@@ -17,7 +17,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Net;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
     class PauseScreen : MenuScreen
     {
@@ -53,12 +53,12 @@ namespace CatapultGame
             this.computer = computer;
 
             // Preserve the old state of the game
-            prevHumanIsActive = this.human.Catapult.IsActive;
-            prevCompuerIsActive = this.computer.Catapult.IsActive;
+            prevHumanIsActive = this.human.Catapault.IsActive;
+            prevCompuerIsActive = this.computer.Catapault.IsActive;
 
             // Pause the game logic progress
-            this.human.Catapult.IsActive = false;
-            this.computer.Catapult.IsActive = false;
+            this.human.Catapault.IsActive = false;
+            this.computer.Catapault.IsActive = false;
 
             AudioManager.PauseResumeSounds(false);
         }
@@ -88,8 +88,8 @@ namespace CatapultGame
         /// <param name="e"></param>
         void StartGameMenuEntrySelected(object sender, EventArgs e)
         {
-            human.Catapult.IsActive = prevHumanIsActive;
-            computer.Catapult.IsActive = prevCompuerIsActive;
+            human.Catapault.IsActive = prevHumanIsActive;
+            computer.Catapault.IsActive = prevCompuerIsActive;
 
             if (!(human as Human).isDragging)
                 AudioManager.PauseResumeSounds(true);

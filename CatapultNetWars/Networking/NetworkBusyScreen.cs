@@ -16,7 +16,7 @@ using Microsoft.Xna.Framework.Graphics;
 using GameStateManagement;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
 	/// <summary>
 	/// When an asynchronous network operation (for instance searching for or joining a

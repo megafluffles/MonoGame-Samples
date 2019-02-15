@@ -19,7 +19,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using GameStateManagement;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
 	/// <summary>
 	/// Component in charge of owning and updating the current NetworkSession object.

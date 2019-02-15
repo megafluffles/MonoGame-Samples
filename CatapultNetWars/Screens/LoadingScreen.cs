@@ -18,7 +18,7 @@ using Microsoft.Xna.Framework.Net;
 using GameStateManagement;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
 	/// <summary>
 	/// The loading screen coordinates transitions between the menu system and the

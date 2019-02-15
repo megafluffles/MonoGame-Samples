@@ -25,7 +25,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
     class AI : Human
     {
@@ -42,8 +42,8 @@ namespace CatapultGame
         public AI(Game game, SpriteBatch screenSpriteBatch)
             : base(game, screenSpriteBatch, PlayerSide.Right)
         {
-            Catapult = new Catapult(game, screenSpriteBatch,
-                            "Textures/Catapults/Red/redIdle/redIdle",
+            Catapault = new Catapault(game, screenSpriteBatch,
+                            "Textures/Catapaults/Red/redIdle/redIdle",
                             new Vector2(600, 332), SpriteEffects.FlipHorizontally, true);
         }
 
@@ -52,7 +52,7 @@ namespace CatapultGame
             //Initialize randomizer
             random = new Random();
 			IsAI = true;
-            //Catapult.Initialize();
+            //Catapault.Initialize();
 
             base.Initialize();
         }
@@ -62,15 +62,15 @@ namespace CatapultGame
         public override void Update(GameTime gameTime)
         {
             // Check if it is time to take a shot
-            if (Catapult.CurrentState == CatapultState.Aiming &&
-                !Catapult.AnimationRunning)
+            if (Catapault.CurrentState == CatapaultState.Aiming &&
+                !Catapault.AnimationRunning)
             {
                 // Fire at a random strength
                 float shotVelocity =
                     random.Next((int)MinShotStrength, (int)MaxShotStrength);
 
-                Catapult.ShotStrength = (shotVelocity / MaxShotStrength);
-                Catapult.ShotVelocity = shotVelocity;
+                Catapault.ShotStrength = (shotVelocity / MaxShotStrength);
+                Catapault.ShotVelocity = shotVelocity;
             }
             base.Update(gameTime);
         }

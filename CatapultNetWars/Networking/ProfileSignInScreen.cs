@@ -16,7 +16,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using GameStateManagement;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
     /// <summary>
     /// In order to play a networked game, you must have a player profile signed in.

@@ -16,7 +16,7 @@ using Microsoft.Xna.Framework.Net;
 using GameStateManagement;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
     /// <summary>
     /// Specialized message box subclass, used to display network error messages.

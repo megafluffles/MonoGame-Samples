@@ -27,7 +27,7 @@ using Microsoft.Xna.Framework.Input.Touch;
 using GameStateManagement;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
 	enum PlayerSide
 	{
@@ -45,7 +45,7 @@ namespace CatapultGame
 		public bool isDragging { get; set; }
 		// Constant for longest distance possible between drag points
 		readonly float maxDragDelta = (new Vector2 (480, 800)).Length ();
-		// Textures & position & spriteEffects used for Catapult
+		// Textures & position & spriteEffects used for Catapault
 		Texture2D arrow;
 		float arrowScale;
 		Vector2 catapultPosition;
@@ -65,14 +65,14 @@ namespace CatapultGame
 
 			if (playerSide == PlayerSide.Left) {
 				catapultPosition = new Vector2 (140, 332);
-				idleTextureName = "Textures/Catapults/Blue/blueIdle/blueIdle";
+				idleTextureName = "Textures/Catapaults/Blue/blueIdle/blueIdle";
 			} else {
 				catapultPosition = new Vector2 (600, 332);
 				spriteEffect = SpriteEffects.FlipHorizontally;
-				idleTextureName = "Textures/Catapults/Red/redIdle/redIdle";
+				idleTextureName = "Textures/Catapaults/Red/redIdle/redIdle";
 			}
 
-			Catapult = new Catapult (game, screenSpriteBatch,
+			Catapault = new Catapault (game, screenSpriteBatch,
 						idleTextureName, catapultPosition, spriteEffect,
 						playerSide == PlayerSide.Left ? false : true);
 		}
@@ -81,7 +81,7 @@ namespace CatapultGame
 		{
 			arrow = curGame.Content.Load<Texture2D> ("Textures/HUD/Arrow");
 
-			Catapult.Initialize ();
+			Catapault.Initialize ();
 
 			base.Initialize ();
 		}
@@ -102,7 +102,7 @@ namespace CatapultGame
 					// calculations and start Aim "animation"
 					if (null == firstSample) {
 						firstSample = gestureSample;
-						Catapult.CurrentState = CatapultState.Aiming;
+						Catapault.CurrentState = CatapaultState.Aiming;
 					}
 
 					// save the current gesture sample
@@ -111,7 +111,7 @@ namespace CatapultGame
 					// calculate the delta between first sample and current
 					// sample to present visual sound on screen
 					Vector2 delta = prevSample.Value.Position - firstSample.Value.Position;
-					Catapult.ShotStrength = delta.Length () / maxDragDelta;
+					Catapault.ShotStrength = delta.Length () / maxDragDelta;
 					float baseScale = 0.001f;
 					arrowScale = baseScale * delta.Length ();
 					isDragging = true;
@@ -120,10 +120,10 @@ namespace CatapultGame
 					// gesture samples
 					if (null != firstSample) {
 						Vector2 delta = prevSample.Value.Position - firstSample.Value.Position;
-						Catapult.ShotVelocity = MinShotStrength + Catapult.ShotStrength *
+						Catapault.ShotVelocity = MinShotStrength + Catapault.ShotStrength *
 									(MaxShotStrength - MinShotStrength);
-						Catapult.Fire (Catapult.ShotVelocity);
-						Catapult.CurrentState = CatapultState.Firing;
+						Catapault.Fire (Catapault.ShotVelocity);
+						Catapault.CurrentState = CatapaultState.Firing;
 					}
 
 					// turn off dragging state
@@ -145,7 +145,7 @@ namespace CatapultGame
 					// calculations and start Aim "animation"
 					if (null == firstMouseSample) {
 						firstMouseSample = input.MouseDragStartPosition;
-						Catapult.CurrentState = CatapultState.Aiming;
+						Catapault.CurrentState = CatapaultState.Aiming;
 					}
 
 					// save the current gesture sample
@@ -154,7 +154,7 @@ namespace CatapultGame
 					// calculate the delta between first sample and current
 					// sample to present visual sound on screen
 					Vector2 delta = (Vector2)prevMouseSample - (Vector2)firstMouseSample;
-					Catapult.ShotStrength = delta.Length () / maxDragDelta;
+					Catapault.ShotStrength = delta.Length () / maxDragDelta;
 					float baseScale = 0.001f;
 					arrowScale = baseScale * delta.Length ();
 					isDragging = true;
@@ -163,10 +163,10 @@ namespace CatapultGame
 					// gesture samples
 					if (null != firstMouseSample) {
 						Vector2 delta = (Vector2)prevMouseSample - (Vector2)firstMouseSample;
-						Catapult.ShotVelocity = MinShotStrength + Catapult.ShotStrength *
+						Catapault.ShotVelocity = MinShotStrength + Catapault.ShotStrength *
 						    (MaxShotStrength - MinShotStrength);
-						Catapult.Fire (Catapult.ShotVelocity);
-						Catapult.CurrentState = CatapultState.Firing;
+						Catapault.Fire (Catapault.ShotVelocity);
+						Catapault.CurrentState = CatapaultState.Firing;
 					}
 
 					ResetDragState ();
@@ -216,7 +216,7 @@ namespace CatapultGame
 			prevMouseSample = null;
 			isDragging = false;
 			arrowScale = 0;
-			Catapult.ShotStrength = 0;
+			Catapault.ShotStrength = 0;
 		}
 	}
 }

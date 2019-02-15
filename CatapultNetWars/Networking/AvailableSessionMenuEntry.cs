@@ -14,7 +14,7 @@ using Microsoft.Xna.Framework.Net;
 using GameStateManagement;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
     /// <summary>
     /// Helper class customizes the standard MenuEntry class

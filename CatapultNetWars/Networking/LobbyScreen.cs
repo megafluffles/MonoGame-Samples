@@ -19,7 +19,7 @@ using GameStateManagement;
 using Microsoft.Xna.Framework.Input.Touch;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
 	/// <summary>
 	/// The lobby screen provides a place for gamers to congregate before starting

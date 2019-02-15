@@ -15,7 +15,7 @@ using System.Collections.Generic;
 using System.Linq;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
     /// <summary>
     /// Component that manages audio playback for all sounds.
@@ -64,11 +64,11 @@ namespace CatapultGame
         {
             string soundLocation = "Sounds/";
             audioManager.soundNames = new string[,] { 
-                            {"CatapultExplosion", "catapultExplosion"}, 
+                            {"CatapaultExplosion", "catapultExplosion"}, 
                             {"Lose", "gameOver_Lose"},
                             {"Win", "gameOver_Win"},
                             {"BoulderHit", "boulderHit"},
-                            {"CatapultFire", "catapultFire"},
+                            {"CatapaultFire", "catapultFire"},
                             {"RopeStretch", "ropeStretch"}};
 
             audioManager.soundBank = new Dictionary<string, SoundEffectInstance>();

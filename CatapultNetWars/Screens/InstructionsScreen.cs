@@ -31,7 +31,7 @@ using MonoTouch.Foundation;
 
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
 	class InstructionsScreen : GameScreen
 	{

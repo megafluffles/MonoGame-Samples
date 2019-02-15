@@ -25,12 +25,12 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
     internal class Player : DrawableGameComponent
     {
         #region Variables/Fields
-        protected CatapultGame curGame;
+        protected CatapaultGame curGame;
         protected SpriteBatch spriteBatch;
 
         // Constants used for calculating shot strength
@@ -38,7 +38,7 @@ namespace CatapultGame
         public const float MaxShotStrength = 400;
 
         // Public variables used by Gameplay class
-        public Catapult Catapult { get; set; }
+        public Catapault Catapault { get; set; }
         public int Score { get; set; }
         public string Name { get; set; }
 
@@ -46,8 +46,8 @@ namespace CatapultGame
         {
             set
             {
-                Catapult.Enemy = value;
-                Catapult.Self = this;
+                Catapault.Enemy = value;
+                Catapault.Self = this;
             }
         }
 
@@ -58,7 +58,7 @@ namespace CatapultGame
         public Player(Game game)
             : base(game)
         {
-            curGame = (CatapultGame)game;
+            curGame = (CatapaultGame)game;
         }
 
         public Player(Game game, SpriteBatch screenSpriteBatch)
@@ -79,14 +79,14 @@ namespace CatapultGame
         public override void Update(GameTime gameTime)
         {
             // Update catapult related to the player
-            Catapult.Update(gameTime);
+            Catapault.Update(gameTime);
             base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime)
         {
             // Draw related catapults
-            Catapult.Draw(gameTime);
+            Catapault.Draw(gameTime);
             base.Draw(gameTime);
         }
         #endregion

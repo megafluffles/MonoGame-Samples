@@ -17,7 +17,7 @@ using MonoTouch.UIKit;
 
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
 #if WINDOWS || XBOX || LINUX
     static class Program
@@ -27,7 +27,7 @@ namespace CatapultGame
         /// </summary>
         static void Main(string[] args)
         {
-            using (CatapultGame game = new CatapultGame())
+            using (CatapaultGame game = new CatapaultGame())
             {
                 game.Run();
             }
@@ -52,10 +52,10 @@ namespace CatapultGame
 	
 	class AppDelegate : MonoMac.AppKit.NSApplicationDelegate
 	{
-		CatapultGame game;
+		CatapaultGame game;
 		public override void FinishedLaunching (MonoMac.Foundation.NSObject notification)
 		{
-			CatapultGame game = new CatapultGame();
+			CatapaultGame game = new CatapaultGame();
 			game.Run ();
 		}
 		
@@ -68,12 +68,12 @@ namespace CatapultGame
 	[Register ("AppDelegate")]
 	class Program : UIApplicationDelegate 
 	{
-		private CatapultGame game;
+		private CatapaultGame game;
 
 		public override void FinishedLaunching (UIApplication app)
 		{
 			// Fun begins..
-			game = new CatapultGame();
+			game = new CatapaultGame();
 			game.Run();
 		}
 		

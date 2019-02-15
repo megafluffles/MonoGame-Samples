@@ -13,7 +13,7 @@ using CatapaultNetWars.Properties;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using CatapultGame;
+using CatapaultGame;
 using Microsoft.Xna.Framework.Input.Touch;
 #endregion
 

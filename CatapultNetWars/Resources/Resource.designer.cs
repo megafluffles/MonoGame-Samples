@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: Android.Runtime.ResourceDesignerAttribute("CatapultWarsNet.Resource", IsApplication=true)]
+[assembly: Android.Runtime.ResourceDesignerAttribute("CatapaultWarsNet.Resource", IsApplication=true)]
 
-namespace CatapultWarsNet
+namespace CatapaultWarsNet
 {
 	
 	

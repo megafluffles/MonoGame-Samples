@@ -17,7 +17,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using GameStateManagement;
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
 	/// <summary>
 	/// This menu screen lets the user choose whether to create a new

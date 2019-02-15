@@ -1,6 +1,6 @@
 #region File Description
 //-----------------------------------------------------------------------------
-// CatapultGame.cs
+// CatapaultGame.cs
 //
 // Microsoft XNA Community Game Platform
 // Copyright (C) Microsoft Corporation. All rights reserved.
@@ -16,12 +16,12 @@ using Microsoft.Xna.Framework.Net;
 
 #endregion
 
-namespace CatapultGame
+namespace CatapaultGame
 {
     /// <summary>
     /// This is the main type for your game
     /// </summary>
-    public class CatapultGame : Game
+    public class CatapaultGame : Game
 	{
         #region Fields
 		GraphicsDeviceManager graphics;
@@ -42,7 +42,7 @@ namespace CatapultGame
         #endregion
 
         #region Initialization Methods
-		public CatapultGame ()
+		public CatapaultGame ()
 		{
 			graphics = new GraphicsDeviceManager (this);
 			//graphics.SynchronizeWithVerticalRetrace = false;
