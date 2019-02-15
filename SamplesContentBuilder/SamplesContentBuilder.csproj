@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0DBDF1C7-0FE6-46D1-A727-EA3ECB416AD0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SamplesContentBuilder</RootNamespace>
+    <AssemblyName>SamplesContentBuilder</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile44</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="SamplesContentBuilderContent\Fonts\Arial.spritefont" />
+    <None Include="SamplesContentBuilderContent\Fonts\DataActiveFont.spritefont" />
+    <None Include="SamplesContentBuilderContent\Fonts\DataFont.spritefont" />
+    <None Include="SamplesContentBuilderContent\Fonts\Font.spritefont" />
+    <None Include="SamplesContentBuilderContent\Fonts\gamefont.spritefont" />
+    <None Include="SamplesContentBuilderContent\Fonts\GameScreenFont14px.spritefont" />
+    <None Include="SamplesContentBuilderContent\Fonts\GameScreenFont16px.spritefont" />
+    <None Include="SamplesContentBuilderContent\Fonts\GameScreenFont36px.spritefont" />
+    <None Include="SamplesContentBuilderContent\Fonts\HighScoreFont.spritefont" />
+    <None Include="SamplesContentBuilderContent\Fonts\HUDFont.spritefont" />
+    <None Include="SamplesContentBuilderContent\Fonts\InstructionsActiveFont.spritefont" />
+    <None Include="SamplesContentBuilderContent\Fonts\InstructionsFont.spritefont" />
+    <None Include="SamplesContentBuilderContent\Fonts\MenuFont.spritefont" />
+    <None Include="SamplesContentBuilderContent\Fonts\TitleFont.spritefont" />
+    <None Include="SamplesContentBuilderContent\Fonts\TypeFont.spritefont" />
+    <None Include="SamplesContentBuilderContent\Models\grid.x" />
+    <None Include="SamplesContentBuilderContent\Models\Ground.x" />
+    <None Include="SamplesContentBuilderContent\Models\spaceship.fbx" />
+    <None Include="SamplesContentBuilderContent\Models\tank.fbx" />
+    <None Include="SamplesContentBuilderContent\Models\terrain.fbx" />
+    <None Include="SamplesContentBuilderContent\SamplesContentBuilderContent.contentproj" />
+    <None Include="SamplesContentBuilderContent\SamplesContentBuilderContent.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SamplesContentBuilderContent\bonus\Apple.png" />
+    <Content Include="SamplesContentBuilderContent\bonus\Banana.png" />
+    <Content Include="SamplesContentBuilderContent\bonus\Bell.png" />
+    <Content Include="SamplesContentBuilderContent\bonus\Cherry.png" />
+    <Content Include="SamplesContentBuilderContent\bonus\Key.png" />
+    <Content Include="SamplesContentBuilderContent\bonus\Orange.png" />
+    <Content Include="SamplesContentBuilderContent\bonus\Pear.png" />
+    <Content Include="SamplesContentBuilderContent\bonus\Pretzel.png" />
+    <Content Include="SamplesContentBuilderContent\bonus\Strawberry.png" />
+    <Content Include="SamplesContentBuilderContent\Effects\BloomCombine.fx" />
+    <Content Include="SamplesContentBuilderContent\Effects\BloomExtract.fx" />
+    <Content Include="SamplesContentBuilderContent\Effects\Clouds.fx" />
+    <Content Include="SamplesContentBuilderContent\Effects\GaussianBlur.fx" />
+    <Content Include="SamplesContentBuilderContent\Effects\ParticleEffect.fx" />
+    <Content Include="SamplesContentBuilderContent\Models\checker.bmp" />
+    <Content Include="SamplesContentBuilderContent\Models\checker.tga" />
+    <Content Include="SamplesContentBuilderContent\Models\enemy.tga" />
+    <Content Include="SamplesContentBuilderContent\Models\engine_diff_tex.tga" />
+    <Content Include="SamplesContentBuilderContent\Models\ground.png" />
+    <Content Include="SamplesContentBuilderContent\Models\turret_alt_diff_tex.tga" />
+    <Content Include="SamplesContentBuilderContent\Music\InGameSong_Loop.mp3" />
+    <Content Include="SamplesContentBuilderContent\Music\InGameSong_Loop.wma" />
+    <Content Include="SamplesContentBuilderContent\Music\MenuMusic_Loop.mp3" />
+    <Content Include="SamplesContentBuilderContent\Music\MenuMusic_Loop.wma" />
+    <Content Include="SamplesContentBuilderContent\Music\One Step Beyond.mp3" />
+    <Content Include="SamplesContentBuilderContent\Music\One Step Beyond.wma" />
+    <Content Include="SamplesContentBuilderContent\sprites\Board.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\BoardFlash.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\Crump.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\DyingSheetNew.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\ExtraLife.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\GhostBase.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\GhostBase2.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\GhostChased.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\GhostEyes.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\GhostEyesCenter.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\PacManEating1.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\PacManEating2.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\PacManEating3.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\PacManEating4.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\PacManEating5.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\PacManEating6.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\PacManEating7.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\PacManEating8.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\PacManEating9.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\PowerPill.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\Selection.png" />
+    <Content Include="SamplesContentBuilderContent\sprites\Title.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Ammo\rock_ammo.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\animation_60x60.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\arrow.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\arrow1_left_60x60.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\arrow1_right_60x60.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\background.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\blank.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\buttonBackground.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\cloud1.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\cloud2.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\defeat.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\GamePlayBackground.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\gameplay_screen.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\highScoreScreen.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\instructions.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\instructions2.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\instructionsPC.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\instructionsXbox.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\mountain.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\pauseBackground.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\sky.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\titleScreen.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\title_screen.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Backgrounds\victory.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\barBlackBorder.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\barGreen.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\barRed.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\barYellow.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\beehive.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\beeWingFlap.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\blank.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Buttons\animation_60x60.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Buttons\arrow1_left_60x60.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Buttons\arrow1_right_60x60.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Buttons\lamp_60x60.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Buttons\perPixelLight_60x60.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Buttons\textureOnOff.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\cat.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Catapults\AnimationsDef.xml" />
+    <Content Include="SamplesContentBuilderContent\Textures\Catapults\Blue\blueDestroyed\blueCatapult_destroyed.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Catapults\Blue\blueFire\blueCatapult_fire.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Catapults\Blue\blueIdle\blueIdle.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Catapults\Blue\bluePullback\blueCatapult_Pullback.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Catapults\Fire_Miss\fire_miss.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Catapults\Hit_Smoke\smoke.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Catapults\Red\redDestroyed\redCatapult_destroyed.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Catapults\Red\redFire\redCatapult_fire.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Catapults\Red\redIdle\redIdle.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Catapults\Red\redPullback\redCatapult_Pullback.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\CatTexture.tga" />
+    <Content Include="SamplesContentBuilderContent\Textures\chat_able.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\chat_mute.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\chat_ready.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\chat_talking.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\checker.bmp" />
+    <Content Include="SamplesContentBuilderContent\Textures\circle.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\collect.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\connected_controller1.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\connected_controller2.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\connected_controller3.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\connected_controller4.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\controlstick.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\controlstickBoundary.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\cursor.bmp" />
+    <Content Include="SamplesContentBuilderContent\Textures\deposit.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\directions.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\DogTexture.tga" />
+    <Content Include="SamplesContentBuilderContent\Textures\explosion.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\explosionStrip.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\fire.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\flare1.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\flare2.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\flare3.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\glow.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\gradient.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\hit.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\honeyJar.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\HUD\ammoType.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\HUD\Arrow.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\HUD\hudBackground.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\HUD\windArrow.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\lamp_60x60.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\logo.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\mouse.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\perPixelLight_60x60.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\select_controller1.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\select_controller2.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\select_controller3.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\select_controller4.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\shooting.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Smoke.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\SmokeAnimationStrip.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\smokeBtn.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\smokePuff.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\SoldierBeeWingFlap.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\spaceBG.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\spotlight.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\sqbrush.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\Square.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\sunset.jpg" />
+    <Content Include="SamplesContentBuilderContent\Textures\tank.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\textureOnOff.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\vat.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\walkLegs.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\walkTorso.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\xboxControllerButtonB.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\xboxControllerButtonX.png" />
+    <Content Include="SamplesContentBuilderContent\Textures\xboxControllerButtonY.png" />
+    <Content Include="SamplesContentBuilderContent\Wavs\10SecondCountdown.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\30SecondWarning.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\BeeBuzzing_Loop.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\bg1.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\bg2.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\bg3.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\bgghost.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\bgghosteyes.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\BoulderHit.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\CatapultExplosion.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\CatapultFire.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\CatSound0.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\CatSound1.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\CatSound2.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\Defeat.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\DepositingIntoVat_Loop.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\DogSound.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\eatfruit.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\eatghost.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\eatpill1.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\eatpill2.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\extralife.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\FillingHoneyPot_Loop.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\HighScore.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\HoneyPotBreak.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\InGameSong_Loop.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\killed.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\Lose.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\MenuMusic_Loop.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\newgame.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\newlevel.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\RopeStretch.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\SmokeGun_Loop.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\Stung.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\Stunned.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\Victory.wav" />
+    <Content Include="SamplesContentBuilderContent\Wavs\Win.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>
