@@ -208,80 +208,80 @@ namespace NetworkStateManagement
 		}
 
 
-		/// <summary>
-		/// Event handler called when the system delivers an invite notification.
-		/// This can occur when the user accepts an invite that was sent to them by
-		/// a friend (pull mode), or if they choose the "Join Session In Progress"
-		/// option in their friends screen (push mode). The handler leaves the
-		/// current session (if any), then joins the session referred to by the
-		/// invite. It is not necessary to prompt the user before doing this, as
-		/// the Guide will already have taken care of the necessary confirmations
-		/// before the invite was delivered to you.
-		/// </summary>
-		public static void InviteAccepted (ScreenManager screenManager,
-					InviteAcceptedEventArgs e)
-		{
-			// If we are already in a network session, leave it now.
-			NetworkSessionComponent self = FindSessionComponent (screenManager.Game);
+		///// <summary>
+		///// Event handler called when the system delivers an invite notification.
+		///// This can occur when the user accepts an invite that was sent to them by
+		///// a friend (pull mode), or if they choose the "Join Session In Progress"
+		///// option in their friends screen (push mode). The handler leaves the
+		///// current session (if any), then joins the session referred to by the
+		///// invite. It is not necessary to prompt the user before doing this, as
+		///// the Guide will already have taken care of the necessary confirmations
+		///// before the invite was delivered to you.
+		///// </summary>
+		//public static void InviteAccepted (ScreenManager screenManager,
+		//			InviteAcceptedEventArgs e)
+		//{
+		//	// If we are already in a network session, leave it now.
+		//	NetworkSessionComponent self = FindSessionComponent (screenManager.Game);
 
-			if (self != null)
-				self.Dispose ();
+		//	if (self != null)
+		//		self.Dispose ();
 
-			try			{
-				// Which local profiles should we include in this session?
-				IEnumerable<SignedInGamer> localGamers = 
-					ChooseGamers (NetworkSessionType.PlayerMatch, e.Gamer.PlayerIndex);
+		//	try			{
+		//		// Which local profiles should we include in this session?
+		//		IEnumerable<SignedInGamer> localGamers = 
+		//			ChooseGamers (NetworkSessionType.PlayerMatch, e.Gamer.PlayerIndex);
 
-				// Begin an asynchronous join-from-invite operation.
-				IAsyncResult asyncResult = NetworkSession.BeginJoinInvited (localGamers, 
-									null, null);
+		//		// Begin an asynchronous join-from-invite operation.
+		//		IAsyncResult asyncResult = NetworkSession.BeginJoinInvited (localGamers, 
+		//							null, null);
 
-				// Use the loading screen to replace whatever screens were previously
-				// active. This will completely reset the screen state, regardless of
-				// whether we were in the menus or playing a game when the invite was
-				// delivered. When the loading screen finishes, it will activate the
-				// network busy screen, which displays an animation as it waits for
-				// the join operation to complete.
-				NetworkBusyScreen busyScreen = new NetworkBusyScreen (asyncResult);
+		//		// Use the loading screen to replace whatever screens were previously
+		//		// active. This will completely reset the screen state, regardless of
+		//		// whether we were in the menus or playing a game when the invite was
+		//		// delivered. When the loading screen finishes, it will activate the
+		//		// network busy screen, which displays an animation as it waits for
+		//		// the join operation to complete.
+		//		NetworkBusyScreen busyScreen = new NetworkBusyScreen (asyncResult);
 
-				busyScreen.OperationCompleted += JoinInvitedOperationCompleted;
+		//		busyScreen.OperationCompleted += JoinInvitedOperationCompleted;
 
-				LoadingScreen.Load (screenManager, false, null, new BackgroundScreen (), 
-							busyScreen);
-			} catch (Exception exception) {
-				NetworkErrorScreen errorScreen = new NetworkErrorScreen (exception);
+		//		LoadingScreen.Load (screenManager, false, null, new BackgroundScreen (), 
+		//					busyScreen);
+		//	} catch (Exception exception) {
+		//		NetworkErrorScreen errorScreen = new NetworkErrorScreen (exception);
 
-				LoadingScreen.Load (screenManager, false, null, new BackgroundScreen (), 
-							new MainMenuScreen (), 
-							errorScreen);
-			}
-		}
+		//		LoadingScreen.Load (screenManager, false, null, new BackgroundScreen (), 
+		//					new MainMenuScreen (), 
+		//					errorScreen);
+		//	}
+		//}
 
 
-		/// <summary>
-		/// Event handler for when the asynchronous join-from-invite
-		/// operation has completed.
-		/// </summary>
-		static void JoinInvitedOperationCompleted (object sender,
-						OperationCompletedEventArgs e)
-		{
-			ScreenManager screenManager = ((GameScreen)sender).ScreenManager;
+		///// <summary>
+		///// Event handler for when the asynchronous join-from-invite
+		///// operation has completed.
+		///// </summary>
+		//static void JoinInvitedOperationCompleted (object sender,
+		//				OperationCompletedEventArgs e)
+		//{
+		//	ScreenManager screenManager = ((GameScreen)sender).ScreenManager;
 
-			try			{
-				// End the asynchronous join-from-invite operation.
-				NetworkSession networkSession = 
-					NetworkSession.EndJoinInvited (e.AsyncResult);
+		//	try			{
+		//		// End the asynchronous join-from-invite operation.
+		//		NetworkSession networkSession = 
+		//			NetworkSession.EndJoinInvited (e.AsyncResult);
 
-				// Create a component that will manage the session we just created.
-				NetworkSessionComponent.Create (screenManager, networkSession);
+		//		// Create a component that will manage the session we just created.
+		//		NetworkSessionComponent.Create (screenManager, networkSession);
 
-				// Go to the lobby screen.
-				screenManager.AddScreen (new LobbyScreen (networkSession), null);
-			} catch (Exception exception) {
-				screenManager.AddScreen (new MainMenuScreen (), null);
-				screenManager.AddScreen (new NetworkErrorScreen (exception), null);
-			}
-		}
+		//		// Go to the lobby screen.
+		//		screenManager.AddScreen (new LobbyScreen (networkSession), null);
+		//	} catch (Exception exception) {
+		//		screenManager.AddScreen (new MainMenuScreen (), null);
+		//		screenManager.AddScreen (new NetworkErrorScreen (exception), null);
+		//	}
+		//}
 
 
 	#endregion
