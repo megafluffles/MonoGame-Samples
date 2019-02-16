@@ -24,8 +24,6 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input.Touch;
-//using Microsoft.Devices;
-using System.Xml.Linq;
 using System.Xml;
 #endregion
 

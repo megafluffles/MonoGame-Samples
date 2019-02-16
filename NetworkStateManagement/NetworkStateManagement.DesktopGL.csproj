@@ -1,11 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{D0E05092-60B2-47FF-B924-D5CDED0C0DD1}</ProjectGuid>
+    <!-- <ProjectTypeGuids>{948B3504-5B70-4649-8FE4-BDE1FB46EC69};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids> -->
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NetworkStateManagement</RootNamespace>
@@ -18,29 +19,36 @@
     <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <!-- <ConsolePause>False</ConsolePause>
+    <EnableCodeSigning>False</EnableCodeSigning>
+    <CreatePackage>False</CreatePackage>
+    <EnablePackageSigning>False</EnablePackageSigning>
+    <IncludeMonoRuntime>False</IncludeMonoRuntime>
+    <UseSGen>False</UseSGen> -->
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Info.plist">
+    </None>
     <None Include="Content\background.png" />
     <None Include="Content\blank.png" />
     <None Include="Content\cat.tga" />
@@ -54,7 +62,9 @@
     <None Include="Game.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Content\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Content\background.xnb" />
     <Content Include="Content\blank.xnb" />
@@ -97,19 +107,5 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Net.WindowsGL.csproj">
-      <Project>{6d6009f4-0afb-4806-89d7-7945f20270f5}</Project>
-      <Name>MonoGame.Framework.Net.WindowsGL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.WindowsGL.csproj">
-      <Project>{6d75e618-19ca-4c51-9546-f10965fbc0b8}</Project>
-      <Name>MonoGame.Framework.WindowsGL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\MonoGame\ThirdParty\Lidgren.Network\Lidgren.Network.WindowsGL.csproj">
-      <Project>{ae483c29-042e-4226-ba52-d247ce7676da}</Project>
-      <Name>Lidgren.Network.WindowsGL</Name>
-    </ProjectReference>
   </ItemGroup>
 </Project>
