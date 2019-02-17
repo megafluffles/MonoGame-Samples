@@ -65,11 +65,11 @@ namespace CatapaultGame
 
 			if (playerSide == PlayerSide.Left) {
 				catapultPosition = new Vector2 (140, 332);
-				idleTextureName = "Textures/Catapaults/Blue/blueIdle/blueIdle";
+				idleTextureName = "Textures/Catapults/Blue/blueIdle/blueIdle";
 			} else {
 				catapultPosition = new Vector2 (600, 332);
 				spriteEffect = SpriteEffects.FlipHorizontally;
-				idleTextureName = "Textures/Catapaults/Red/redIdle/redIdle";
+				idleTextureName = "Textures/Catapults/Red/redIdle/redIdle";
 			}
 
 			Catapault = new Catapault (game, screenSpriteBatch,

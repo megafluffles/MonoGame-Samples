@@ -177,12 +177,12 @@ namespace CatapaultGame
             // Load multiple animations form XML definition
             XmlDocument doc = new XmlDocument();
 #if ANDROID
-			using(var stream = Game.Activity.Assets.Open(@"Content/Textures/Catapaults/AnimationsDef.xml"))
+			using(var stream = Game.Activity.Assets.Open(@"Content/Textures/Catapults/AnimationsDef.xml"))
 			{
 				doc = XDocument.Load(stream);
 			}
 #else			
-            doc.Load("Content/Textures/Catapaults/AnimationsDef.xml");
+            doc.Load("Content/Textures/Catapults/AnimationsDef.xml");
 #endif
             // Loop over all definitions in XML
             foreach (XmlNode animationDefinition in doc.GetElementsByTagName("Definition"))

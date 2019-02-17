@@ -43,7 +43,7 @@ namespace CatapaultGame
             : base(game, screenSpriteBatch, PlayerSide.Right)
         {
             Catapault = new Catapault(game, screenSpriteBatch,
-                            "Textures/Catapaults/Red/redIdle/redIdle",
+                            "Textures/Catapults/Red/redIdle/redIdle",
                             new Vector2(600, 332), SpriteEffects.FlipHorizontally, true);
         }
 
