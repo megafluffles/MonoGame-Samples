@@ -63,10 +63,10 @@ namespace CatapaultGame
 		{
 			ContentManager content = ScreenManager.Game.Content;
 
-			isReadyTexture = content.Load<Texture2D> ("chat_ready");
-			hasVoiceTexture = content.Load<Texture2D> ("chat_able");
-			isTalkingTexture = content.Load<Texture2D> ("chat_talking");
-			voiceMutedTexture = content.Load<Texture2D> ("chat_mute");
+			isReadyTexture = content.Load<Texture2D> ("Textures/chat_ready");
+			hasVoiceTexture = content.Load<Texture2D> ("Textures/chat_able");
+			isTalkingTexture = content.Load<Texture2D> ("Textures/chat_talking");
+			voiceMutedTexture = content.Load<Texture2D> ("Textures/chat_mute");
 		}
 
 

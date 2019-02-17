@@ -27,11 +27,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Players\Human.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Players\Player.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Properties\AssemblyInfo.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Properties\Resources.Designer.cs">
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Resources\Resource.designer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ScreenManager\GameScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ScreenManager\InputState.cs" />
@@ -76,11 +71,5 @@
     <Folder Include="$(MSBuildThisFileDirectory)Assets\Content\Textures\Catapults\Red\redPullback\" />
     <Folder Include="$(MSBuildThisFileDirectory)Assets\Content\Textures\HUD\" />
     <Folder Include="$(MSBuildThisFileDirectory)Resources\layout\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Properties\Resources.resx">
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>

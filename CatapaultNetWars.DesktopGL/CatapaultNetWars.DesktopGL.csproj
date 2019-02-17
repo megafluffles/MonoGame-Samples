@@ -9,7 +9,7 @@
     <ProjectGuid>{31E8EF51-54FB-4384-BE5B-CE9A0BFEE381}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CatapaultNetWars.DesktopGL</RootNamespace>
+    <RootNamespace>CatapaultNetWars</RootNamespace>
     <AssemblyName>CatapaultNetWars.DesktopGL</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MonoGamePlatform>DesktopGL</MonoGamePlatform>
@@ -49,7 +49,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Icon.ico" />
     <EmbeddedResource Include="Icon.bmp" />
-    <EmbeddedResource Include="Resources.resx">
+    <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
@@ -123,12 +123,10 @@
       <Name>SamplesContentBuilder</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="Resources.Designer.cs">
+    <Compile Include="Properties\Resources.Designer.cs">
       <DependentUpon>Resources.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

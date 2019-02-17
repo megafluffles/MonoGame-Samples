@@ -75,8 +75,8 @@ namespace CatapaultGame
 		{
 			ContentManager content = ScreenManager.Game.Content;
 
-			gradientTexture = content.Load<Texture2D> ("gradient");
-			catTexture = content.Load<Texture2D> ("cat");
+			gradientTexture = content.Load<Texture2D> ("Textures/gradient");
+			catTexture = content.Load<Texture2D> ("Textures/cat");
 		}
 
 
