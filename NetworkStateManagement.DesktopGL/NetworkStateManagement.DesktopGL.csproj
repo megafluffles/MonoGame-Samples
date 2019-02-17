@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{31E8EF51-54FB-4384-BE5B-CE9A0BFEE381}</ProjectGuid>
+    <ProjectGuid>{A2150F00-A5FF-475E-BC3E-A76E9F2335AD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CatapaultNetWars.DesktopGL</RootNamespace>
-    <AssemblyName>CatapaultNetWars.DesktopGL</AssemblyName>
+    <RootNamespace>NetworkStateManagement</RootNamespace>
+    <AssemblyName>NetworkStateManagement.DesktopGL</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MonoGamePlatform>DesktopGL</MonoGamePlatform>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -102,6 +102,9 @@
     <None Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Net.WindowsGL.csproj">
       <Project>{6d6009f4-0afb-4806-89d7-7945f20270f5}</Project>
       <Name>MonoGame.Framework.Net.WindowsGL</Name>
@@ -114,22 +117,12 @@
       <Project>{ae483c29-042e-4226-ba52-d247ce7676da}</Project>
       <Name>Lidgren.Network.WindowsGL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NetworkStateManagement.DesktopGL\NetworkStateManagement.DesktopGL.csproj">
-      <Project>{a2150f00-a5ff-475e-bc3e-a76e9f2335ad}</Project>
-      <Name>NetworkStateManagement.DesktopGL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SamplesContentBuilder\SamplesContentBuilder.csproj">
       <Project>{0dbdf1c7-0fe6-46d1-a727-ea3ecb416ad0}</Project>
       <Name>SamplesContentBuilder</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Program.cs" />
-  </ItemGroup>
-  <Import Project="..\CatapaultNetWars.Shared\CatapaultNetWars.Shared.projitems" Label="Shared" />
+  <Import Project="..\NetworkStateManagement.Shared\NetworkStateManagement.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
