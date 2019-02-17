@@ -35,7 +35,6 @@
     <None Include="$(MSBuildThisFileDirectory)Content\menufont.spritefont" />
     <None Include="$(MSBuildThisFileDirectory)Content\menufont.xnb" />
     <None Include="$(MSBuildThisFileDirectory)Info.plist" />
-    <None Include="$(MSBuildThisFileDirectory)Resources.resources" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Game.cs" />
@@ -52,7 +51,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Networking\ProfileSignInScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Program.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Properties\AssemblyInfo.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Resources.Designer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ScreenManager\GameScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ScreenManager\InputState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ScreenManager\ScreenManager.cs" />
@@ -65,8 +63,5 @@
     <Compile Include="$(MSBuildThisFileDirectory)Screens\MessageBoxScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Screens\PauseMenuScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Screens\PlayerIndexEventArgs.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources.resx" />
   </ItemGroup>
 </Project>

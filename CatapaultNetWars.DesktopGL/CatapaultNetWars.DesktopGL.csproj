@@ -49,6 +49,10 @@
   <ItemGroup>
     <EmbeddedResource Include="Icon.ico" />
     <EmbeddedResource Include="Icon.bmp" />
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\SDL2.dll">
@@ -114,10 +118,6 @@
       <Project>{ae483c29-042e-4226-ba52-d247ce7676da}</Project>
       <Name>Lidgren.Network.WindowsGL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NetworkStateManagement.DesktopGL\NetworkStateManagement.DesktopGL.csproj">
-      <Project>{a2150f00-a5ff-475e-bc3e-a76e9f2335ad}</Project>
-      <Name>NetworkStateManagement.DesktopGL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SamplesContentBuilder\SamplesContentBuilder.csproj">
       <Project>{0dbdf1c7-0fe6-46d1-a727-ea3ecb416ad0}</Project>
       <Name>SamplesContentBuilder</Name>
@@ -128,6 +128,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
   </ItemGroup>
   <Import Project="..\CatapaultNetWars.Shared\CatapaultNetWars.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
