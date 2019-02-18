@@ -179,8 +179,8 @@ namespace CatapaultGame
 #if ANDROID
 			using(var stream = Game.Activity.Assets.Open(@"Content/Textures/Catapults/AnimationsDef.xml"))
 			{
-				doc = XDocument.Load(stream);
-			}
+                doc.Load(stream);
+            }
 #else			
             doc.Load("Content/Textures/Catapults/AnimationsDef.xml");
 #endif

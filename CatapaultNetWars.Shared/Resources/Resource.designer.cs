@@ -10,7 +10,7 @@
 //------------------------------------------------------------------------------
 
 #if ANDROID
-[assembly: Android.Runtime.ResourceDesignerAttribute("CatapaultWarsNet.Resource", IsApplication=true)]
+//[assembly: Android.Runtime.ResourceDesignerAttribute("CatapaultWarsNet.Resource", IsApplication=true)]
 #endif
 
 namespace CatapaultWarsNet
