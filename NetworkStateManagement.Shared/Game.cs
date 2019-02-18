@@ -53,14 +53,14 @@ namespace NetworkStateManagement
 		/// The main game constructor.
 		/// </summary>		
 #if ANDROID 
-		public NetworkStateManagementGame  (Activity activity) : base (activity)
+		public NetworkStateManagementGame  () : base (/*activity*/)
 #else 
         public NetworkStateManagementGame  ()  
 #endif
 		{
 			Content.RootDirectory = "Content";
 
-			graphics = new GraphicsDeviceManager (this);            
+			graphics = new GraphicsDeviceManager (this);
 #if ANDROID
             graphics.IsFullScreen = true;
 #else
