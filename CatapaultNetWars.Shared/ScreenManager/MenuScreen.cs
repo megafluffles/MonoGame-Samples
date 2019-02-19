@@ -14,6 +14,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Input;
+using MonoGame.Extended.ViewportAdapters;
 #endregion
 
 namespace GameStateManagement
@@ -287,7 +288,7 @@ namespace GameStateManagement
             SpriteBatch spriteBatch = ScreenManager.SpriteBatch;
             SpriteFont font = ScreenManager.Font;
 
-            spriteBatch.Begin();
+            spriteBatch.Begin(transformMatrix: ScreenManager.ViewportAdapter.GetScaleMatrix());
 
             // Draw each menu entry in turn.
             for (int i = 0; i < menuEntries.Count; i++)

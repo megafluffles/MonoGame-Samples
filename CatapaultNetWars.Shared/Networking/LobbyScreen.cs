@@ -206,7 +206,7 @@ namespace CatapaultGame
 			else
 				position.X += transitionOffset * 512;
 
-			spriteBatch.Begin ();
+			spriteBatch.Begin (transformMatrix: ScreenManager.ViewportAdapter.GetScaleMatrix());
 
 			// Draw all the gamers in the session.
 			int gamerCount = 0;

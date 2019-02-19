@@ -17,6 +17,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input.Touch;
 using System.IO;
 using System.IO.IsolatedStorage;
+using MonoGame.Extended.ViewportAdapters;
 #endregion
 
 namespace GameStateManagement
@@ -44,6 +45,8 @@ namespace GameStateManagement
 
         bool traceEnabled;
 
+        private ViewportAdapter _viewportAdapter;
+
         #endregion
 
         #region Properties
@@ -56,6 +59,18 @@ namespace GameStateManagement
         public SpriteBatch SpriteBatch
         {
             get { return spriteBatch; }
+        }
+
+        public ViewportAdapter ViewportAdapter
+        {
+            get
+            {
+                if (_viewportAdapter == null)
+                {
+                    _viewportAdapter = new BoxingViewportAdapter(Game.Window, Game.GraphicsDevice, 800, 480);
+                }
+                return _viewportAdapter;
+            }
         }
 
 
@@ -303,7 +318,7 @@ namespace GameStateManagement
         {
             Viewport viewport = GraphicsDevice.Viewport;
 
-            spriteBatch.Begin();
+            spriteBatch.Begin(transformMatrix: ViewportAdapter.GetScaleMatrix());
 
             spriteBatch.Draw(blankTexture,
                              new Rectangle(0, 0, viewport.Width, viewport.Height),

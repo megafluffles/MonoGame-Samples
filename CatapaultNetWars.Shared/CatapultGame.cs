@@ -71,8 +71,8 @@ namespace CatapaultGame
 			//Switch to full screen for best game experience
 			graphics.IsFullScreen = true;
 #else
-            graphics.PreferredBackBufferHeight = 480;
-            graphics.PreferredBackBufferWidth = 800;
+            graphics.PreferredBackBufferHeight = 800;
+            graphics.PreferredBackBufferWidth = 1280;
 #endif
 			AudioManager.Initialize (this);
 		}

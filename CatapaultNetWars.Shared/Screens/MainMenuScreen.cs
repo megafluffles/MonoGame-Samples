@@ -14,6 +14,7 @@ using System.Linq;
 using System.Text;
 using GameStateManagement;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Net;
 #endregion
 
@@ -111,7 +112,6 @@ namespace CatapaultGame
 			// Activate the ProfileSignInScreen.
 			ScreenManager.AddScreen (profileSignIn, playerIndex);
 		}
-
 
         #endregion
     }
