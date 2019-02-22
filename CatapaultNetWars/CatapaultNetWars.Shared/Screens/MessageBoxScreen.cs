@@ -168,7 +168,7 @@ namespace GameStateManagement
             // Fade the popup alpha during transitions.
             Color color = Color.White * TransitionAlpha;
 
-            spriteBatch.Begin();
+            spriteBatch.Begin(transformMatrix: ScreenManager.ViewportAdapter.GetScaleMatrix());
 
             // Draw the background rectangle.
             spriteBatch.Draw(gradientTexture, backgroundRectangle, color);

@@ -1,0 +1,40 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Catapult Net Wars OpenGL",
+            "type": "clr",
+            "request": "launch",
+            "preLaunchTask": "Build CataultNetWars",
+            "program": "${workspaceFolder}/CatapaultNetWars/CatapaultNetWars.DesktopGL/bin/DesktopGL/AnyCPU/Debug/CatapaultNetWars.DesktopGL.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": "Catapult Net Wars OpenGL (2)",
+            "type": "clr",
+            "request": "launch",
+            "preLaunchTask": "Build CataultNetWars",
+            "program": "${workspaceFolder}/CatapaultNetWars/CatapaultNetWars.DesktopGL/bin/DesktopGL/AnyCPU/Debug/CatapaultNetWars.DesktopGL.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+    ,
+    "compounds": [
+        {
+            "name": "Catapult Net Wars OpenGL 2 Player",
+            "preLaunchTask" : "Build CataultNetWars",
+            "configurations": ["Catapult Net Wars OpenGL (2)", "Catapult Net Wars OpenGL"]
+        }
+    ]
+}

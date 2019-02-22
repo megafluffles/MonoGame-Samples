@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CatapultWars", "CatapultWars", "{F17BF64B-3F16-4E25-9478-EC6F766CE73D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CatapultNetWars", "CatapultNetWars", "{2A8EBF62-8E2B-46DF-9E1D-5D2FA591AB8B}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CatapaultNetWars.Shared", "CatapaultNetWars\CatapaultNetWars.Shared\CatapaultNetWars.Shared.shproj", "{3129346C-85E9-444D-9F7E-D4F33987FDFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatapaultNetWars.DesktopGL", "CatapaultNetWars\CatapaultNetWars.DesktopGL\CatapaultNetWars.DesktopGL.csproj", "{31E8EF51-54FB-4384-BE5B-CE9A0BFEE381}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatapaultNetWars.Android", "CatapaultNetWars\CatapaultNetWars.Android\CatapaultNetWars.Android.csproj", "{7E9B5275-192F-46D2-9F56-72065235EC25}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CatapaultWars.Shared", "CatapaultWars\CatapaultWars.Shared\CatapaultWars.Shared.shproj", "{A918A474-5266-484A-9CFA-48C17CC245EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatapaultWars.Android", "CatapaultWars\CatapaultWars.Android\CatapaultWars.Android.csproj", "{4B4C7489-BD1B-4741-A3A1-6921674199A5}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		CatapaultNetWars\CatapaultNetWars.Shared\CatapaultNetWars.Shared.projitems*{3129346c-85e9-444d-9f7e-d4f33987fdfa}*SharedItemsImports = 13
+		CatapaultNetWars\CatapaultNetWars.Shared\CatapaultNetWars.Shared.projitems*{31e8ef51-54fb-4384-be5b-ce9a0bfee381}*SharedItemsImports = 4
+		CatapaultWars\CatapaultWars.Shared\CatapaultWars.Shared.projitems*{4b4c7489-bd1b-4741-a3a1-6921674199a5}*SharedItemsImports = 4
+		CatapaultNetWars\CatapaultNetWars.Shared\CatapaultNetWars.Shared.projitems*{7e9b5275-192f-46d2-9f56-72065235ec25}*SharedItemsImports = 4
+		CatapaultWars\CatapaultWars.Shared\CatapaultWars.Shared.projitems*{a918a474-5266-484a-9cfa-48c17cc245ea}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31E8EF51-54FB-4384-BE5B-CE9A0BFEE381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31E8EF51-54FB-4384-BE5B-CE9A0BFEE381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31E8EF51-54FB-4384-BE5B-CE9A0BFEE381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31E8EF51-54FB-4384-BE5B-CE9A0BFEE381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E9B5275-192F-46D2-9F56-72065235EC25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E9B5275-192F-46D2-9F56-72065235EC25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E9B5275-192F-46D2-9F56-72065235EC25}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7E9B5275-192F-46D2-9F56-72065235EC25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E9B5275-192F-46D2-9F56-72065235EC25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E9B5275-192F-46D2-9F56-72065235EC25}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4B4C7489-BD1B-4741-A3A1-6921674199A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B4C7489-BD1B-4741-A3A1-6921674199A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B4C7489-BD1B-4741-A3A1-6921674199A5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4B4C7489-BD1B-4741-A3A1-6921674199A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B4C7489-BD1B-4741-A3A1-6921674199A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B4C7489-BD1B-4741-A3A1-6921674199A5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3129346C-85E9-444D-9F7E-D4F33987FDFA} = {2A8EBF62-8E2B-46DF-9E1D-5D2FA591AB8B}
+		{31E8EF51-54FB-4384-BE5B-CE9A0BFEE381} = {2A8EBF62-8E2B-46DF-9E1D-5D2FA591AB8B}
+		{7E9B5275-192F-46D2-9F56-72065235EC25} = {2A8EBF62-8E2B-46DF-9E1D-5D2FA591AB8B}
+		{A918A474-5266-484A-9CFA-48C17CC245EA} = {F17BF64B-3F16-4E25-9478-EC6F766CE73D}
+		{4B4C7489-BD1B-4741-A3A1-6921674199A5} = {F17BF64B-3F16-4E25-9478-EC6F766CE73D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {081AEE8F-22D7-4398-9F64-F858332301CD}
+	EndGlobalSection
+EndGlobal

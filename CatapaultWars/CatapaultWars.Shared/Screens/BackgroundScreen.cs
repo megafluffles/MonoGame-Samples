@@ -45,7 +45,7 @@ namespace CatapultGame
         {
             SpriteBatch spriteBatch = ScreenManager.SpriteBatch;
 
-            spriteBatch.Begin();
+            spriteBatch.Begin(transformMatrix: ScreenManager.ViewportAdapter.GetScaleMatrix());
 
             // Draw Background
             spriteBatch.Draw(background, new Vector2(0, 0),

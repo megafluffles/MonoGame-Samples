@@ -17,6 +17,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input.Touch;
 using System.IO;
 using System.IO.IsolatedStorage;
+using MonoGame.Extended.ViewportAdapters;
 #endregion
 
 namespace GameStateManagement
@@ -44,6 +45,8 @@ namespace GameStateManagement
 
         bool traceEnabled;
 
+        private ViewportAdapter _viewportAdapter;
+
         #endregion
 
         #region Properties
@@ -56,6 +59,19 @@ namespace GameStateManagement
         public SpriteBatch SpriteBatch
         {
             get { return spriteBatch; }
+        }
+
+        public ViewportAdapter ViewportAdapter
+        {
+            get
+            {
+                if (_viewportAdapter == null)
+                {
+                    _viewportAdapter = new ScalingViewportAdapter(Game.GraphicsDevice, 800, 480);
+                    //_viewportAdapter = new DefaultViewportAdapter(Game.GraphicsDevice);
+                }
+                return _viewportAdapter;
+            }
         }
 
 
@@ -198,6 +214,7 @@ namespace GameStateManagement
             // Print debug trace?
             if (traceEnabled)
                 TraceScreens();
+
         }
 
 
@@ -211,10 +228,10 @@ namespace GameStateManagement
             foreach (GameScreen screen in screens)
                 screenNames.Add(screen.GetType().Name);
 
-            Debug.WriteLine(string.Join(", ", screenNames.ToArray()));
+            Console.WriteLine(string.Join(", ", screenNames.ToArray()));
         }
 
-
+		int count = 0;
         /// <summary>
         /// Tells each screen to draw itself.
         /// </summary>
@@ -302,7 +319,7 @@ namespace GameStateManagement
         {
             Viewport viewport = GraphicsDevice.Viewport;
 
-            spriteBatch.Begin();
+            spriteBatch.Begin(transformMatrix: ViewportAdapter.GetScaleMatrix());
 
             spriteBatch.Draw(blankTexture,
                              new Rectangle(0, 0, viewport.Width, viewport.Height),

@@ -216,7 +216,7 @@ namespace CatapultGame
         /// <param name="gameTime">The elapsed time since last Draw</param>
         public override void Draw(GameTime gameTime)
         {
-            ScreenManager.SpriteBatch.Begin();
+            ScreenManager.SpriteBatch.Begin(transformMatrix: ScreenManager.ViewportAdapter.GetScaleMatrix());
 
             // Render all parts of the screen
             DrawBackground();

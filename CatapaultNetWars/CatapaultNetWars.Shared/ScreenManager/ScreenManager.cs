@@ -67,7 +67,8 @@ namespace GameStateManagement
             {
                 if (_viewportAdapter == null)
                 {
-                    _viewportAdapter = new BoxingViewportAdapter(Game.Window, Game.GraphicsDevice, 800, 480);
+                    _viewportAdapter = new ScalingViewportAdapter(Game.GraphicsDevice, 800, 480);
+                    //_viewportAdapter = new DefaultViewportAdapter(Game.GraphicsDevice);
                 }
                 return _viewportAdapter;
             }
