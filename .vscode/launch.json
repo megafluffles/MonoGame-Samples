@@ -7,25 +7,34 @@
         {
             "name": "Catapult Net Wars OpenGL",
             "type": "clr",
+            "cwd": "${workspaceFolder}",
+            "linux":
+            {
+                "type":"mono",
+                "cwd": "${workspaceFolder}/CatapaultNetWars/CatapaultNetWars.DesktopGL/bin/DesktopGL/AnyCPU/Debug/",
+            },
             "request": "launch",
-            "preLaunchTask": "Build CataultNetWars",
+            "preLaunchTask": "Build CatapultNetWars Desktop Only",
             "program": "${workspaceFolder}/CatapaultNetWars/CatapaultNetWars.DesktopGL/bin/DesktopGL/AnyCPU/Debug/CatapaultNetWars.DesktopGL.exe",
             "args": [],
-            "cwd": "${workspaceFolder}",
             "console": "internalConsole",
-            "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart"
         },
         {
             "name": "Catapult Net Wars OpenGL (2)",
             "type": "clr",
+            "cwd": "${workspaceFolder}",
+            "linux":
+            {
+                "type":"mono",
+                "cwd": "${workspaceFolder}/CatapaultNetWars/CatapaultNetWars.DesktopGL/bin/DesktopGL/AnyCPU/Debug/",
+            },
             "request": "launch",
-            "preLaunchTask": "Build CataultNetWars",
+            "preLaunchTask": "Build CatapultNetWars Desktop Only",
             "program": "${workspaceFolder}/CatapaultNetWars/CatapaultNetWars.DesktopGL/bin/DesktopGL/AnyCPU/Debug/CatapaultNetWars.DesktopGL.exe",
             "args": [],
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
-            "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart"
         }
     ]
@@ -33,7 +42,7 @@
     "compounds": [
         {
             "name": "Catapult Net Wars OpenGL 2 Player",
-            "preLaunchTask" : "Build CataultNetWars",
+            "preLaunchTask" : "Build CatapultNetWars Desktop Only",
             "configurations": ["Catapult Net Wars OpenGL (2)", "Catapult Net Wars OpenGL"]
         }
     ]

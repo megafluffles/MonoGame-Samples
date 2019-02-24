@@ -43,14 +43,23 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MonoGame.Extended, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MonoGame.Extended.1.1.0\lib\portable-net45+win8+wpa81\MonoGame.Extended.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
+    <Reference Include="Lidgren.Network">
+      <HintPath>..\..\..\MonoGame\MonoGame.Framework\bin\WindowsGL\AnyCPU\Debug\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\..\..\MonoGame\MonoGame.Framework\bin\WindowsGL\AnyCPU\Debug\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework.Net">
+      <HintPath>..\..\..\MonoGame\MonoGame.Framework\bin\WindowsGL\AnyCPU\Debug\MonoGame.Framework.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Extended">
+      <HintPath>..\..\packages\MonoGame.Extended.1.1.0\lib\portable-net45+win8+wpa81\MonoGame.Extended.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Icon.ico" />
@@ -111,24 +120,6 @@
     <None Include="app.config" />
     <None Include="app.manifest" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Net.WindowsGL.csproj">
-      <Project>{6d6009f4-0afb-4806-89d7-7945f20270f5}</Project>
-      <Name>MonoGame.Framework.Net.WindowsGL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.WindowsGL.csproj">
-      <Project>{6d75e618-19ca-4c51-9546-f10965fbc0b8}</Project>
-      <Name>MonoGame.Framework.WindowsGL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\MonoGame\ThirdParty\Lidgren.Network\Lidgren.Network.WindowsGL.csproj">
-      <Project>{ae483c29-042e-4226-ba52-d247ce7676da}</Project>
-      <Name>Lidgren.Network.WindowsGL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\SamplesContentBuilder\SamplesContentBuilder.csproj">
-      <Project>{0dbdf1c7-0fe6-46d1-a727-ea3ecb416ad0}</Project>
-      <Name>SamplesContentBuilder</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

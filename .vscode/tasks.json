@@ -4,15 +4,33 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build CataultNetWars",
+            "label": "Build CatapultNetWars All",
             "type": "shell",
             "command": "msbuild",
             "args": [
                 // Ask msbuild to generate full paths for file names.
                 "CatapultWarsAll.sln",
+                "/p:AndroidSdkDirectory=/home/justin/Android/Sdk/",
                 "/p:Configuration=Debug",
-                "/property:GenerateFullPaths=true",
-                "/t:build"
+                "/property:GenerateFullPaths=true"
+            ],
+            "group": "build",
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Build CatapultNetWars Desktop Only",
+            "type": "shell",
+            "command": "msbuild",
+            "args": [
+                // Ask msbuild to generate full paths for file names.
+                "CatapultWarsDesktopGL.sln",
+                "/p:Configuration=Debug",
+                "/property:GenerateFullPaths=true"
             ],
             "group": "build",
             "presentation": {
