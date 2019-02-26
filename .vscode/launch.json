@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
@@ -83,69 +82,4 @@
             "configurations": ["NetworkPrediction Windows", "NetworkPrediction Windows (2)"]
         }
     ]
-=======
-{
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        { // NetworkPrediction Windows
-            "name": "NetworkPrediction Windows",
-            "type": "clr",
-            "cwd": "${workspaceFolder}",
-            "linux":
-            {
-                "type": "mono",
-                "cwd": "${workspaceFolder}/NetworkPrediction/bin/Debug/",
-            },
-            "request": "launch",
-            "preLaunchTask": "Build NetworkPrediction Windows",
-            "program": "${workspaceFolder}/NetworkPrediction/bin/Debug/NetworkPrediction.exe",
-            "args": [],
-            "console": "internalConsole",
-            "internalConsoleOptions": "openOnSessionStart"
-        },
-        { // Catapult Net Wars OpenGL
-            "name": "Catapult Net Wars OpenGL",
-            "type": "clr",
-            "cwd": "${workspaceFolder}",
-            "linux":
-            {
-                "type":"mono",
-                "cwd": "${workspaceFolder}/CatapaultNetWars/CatapaultNetWars.DesktopGL/bin/DesktopGL/AnyCPU/Debug/",
-            },
-            "request": "launch",
-            "preLaunchTask": "Build CatapultNetWars Desktop Only",
-            "program": "${workspaceFolder}/CatapaultNetWars/CatapaultNetWars.DesktopGL/bin/DesktopGL/AnyCPU/Debug/CatapaultNetWars.DesktopGL.exe",
-            "args": [],
-            "console": "internalConsole",
-            "internalConsoleOptions": "openOnSessionStart"
-        },
-        { // Catapult Net Wars OpenGL (2)
-            "name": "Catapult Net Wars OpenGL (2)",
-            "type": "clr",
-            "cwd": "${workspaceFolder}",
-            "linux":
-            {
-                "type":"mono",
-                "cwd": "${workspaceFolder}/CatapaultNetWars/CatapaultNetWars.DesktopGL/bin/DesktopGL/AnyCPU/Debug/",
-            },
-            "request": "launch",
-            "preLaunchTask": "Build CatapultNetWars Desktop Only",
-            "program": "${workspaceFolder}/CatapaultNetWars/CatapaultNetWars.DesktopGL/bin/DesktopGL/AnyCPU/Debug/CatapaultNetWars.DesktopGL.exe",
-            "args": [],
-            "console": "internalConsole",
-            "internalConsoleOptions": "openOnSessionStart"
-        }
-    ]
-    ,
-    "compounds": [
-        {
-            "name": "Catapult Net Wars OpenGL 2 Player",
-            "preLaunchTask" : "Build CatapultNetWars Desktop Only",
-            "configurations": ["Catapult Net Wars OpenGL (2)", "Catapult Net Wars OpenGL"]
-        }
-    ]
->>>>>>> b94ca1c961b6dc2ad9ecfceb03cce69069b73172
 }
