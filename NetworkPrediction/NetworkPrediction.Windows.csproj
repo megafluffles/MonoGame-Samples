@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
@@ -90,4 +91,98 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0EBAD2F-0DB1-4C42-B855-5B9BBDDD3512}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetworkPrediction</RootNamespace>
+    <AssemblyName>NetworkPrediction</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NetworkPredictionGame.cs">
+      <Link>NetworkPredictionGame.cs</Link>
+    </Compile>
+    <Compile Include="RollingAverage.cs">
+      <Link>RollingAverage.cs</Link>
+    </Compile>
+    <Compile Include="Tank.cs">
+      <Link>Tank.cs</Link>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Font.xnb">
+      <Link>Content\Font.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Tank.xnb">
+      <Link>Content\Tank.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Turret.xnb">
+      <Link>Content\Turret.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Linux.csproj">
+      <Project>{35253CE1-C864-4CD3-8249-4D1319748E8F}</Project>
+      <Name>MonoGame.Framework.Linux</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Net.Linux.csproj">
+      <Project>{1B738549-0449-4504-B978-7BFC347E3F3C}</Project>
+      <Name>MonoGame.Framework.Net.Linux</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MonoGame\ThirdParty\Lidgren.Network\Lidgren.Network.Linux.csproj">
+      <Project>{758CB33D-6EBD-41EA-BB0C-55B1C97A325F}</Project>
+      <Name>Lidgren.Network.Linux</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+>>>>>>> b94ca1c961b6dc2ad9ecfceb03cce69069b73172
 </Project>
