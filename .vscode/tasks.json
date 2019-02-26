@@ -3,7 +3,24 @@
     // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
-        {
+        { // Build NetworkPrediction Windows
+            "label": "Build NetworkPrediction Windows",
+            "type": "shell",
+            "command": "msbuild",
+            "args": [
+                // Ask msbuild to generate full paths for file names.
+                "NetworkPrediction/NetworkPrediction.Windows.sln",
+                "/p:Configuration=Debug"
+            ],
+            "group": "build",
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile"
+        },
+        { // Build CatapultNetWars All
             "label": "Build CatapultNetWars All",
             "type": "shell",
             "command": "msbuild",
@@ -22,7 +39,7 @@
             // Use the standard MS compiler pattern to detect errors, warnings and infos
             "problemMatcher": "$msCompile"
         },
-        {
+        { // Build CatapultNetWars Desktop Only
             "label": "Build CatapultNetWars Desktop Only",
             "type": "shell",
             "command": "msbuild",
