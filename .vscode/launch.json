@@ -4,6 +4,21 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        { // Peer2Peer MasterServer Game
+            "name": "Peer2Peer MasterServer Game",
+            "type": "clr",
+            "cwd": "${workspaceFolder}/Peer2PeerSampleGame/bin/DesktopGL/AnyCPU/Debug",
+            "linux":
+            {
+                "type": "mono",
+            },
+            "request": "launch",
+            "preLaunchTask": "Build NetworkPrediction Windows",
+            "program": "${workspaceFolder}/Peer2PeerSampleGame/bin/DesktopGL/AnyCPU/Debug/Peer2PeerSampleGame.exe",
+            "args": [],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart"
+        },
         { // NetworkPrediction Windows
             "name": "NetworkPrediction Windows",
             "type": "clr",
