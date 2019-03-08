@@ -48,7 +48,7 @@ namespace Peer2PeerMasterServer
                             {
                                 case 0: // register a new game
                                     // currently only one game per host per router.
-                                    if (!registeredHosts.ContainsKey(msg.SenderEndpoint))
+                                    if (!registeredHosts.ContainsKey(msg.SenderEndPoint))
                                     {
                                         AvailableGame game = new AvailableGame();
                                         game.Count = msg.ReadInt32();
@@ -56,8 +56,8 @@ namespace Peer2PeerMasterServer
                                         game.PrivateGamerSlots = msg.ReadInt32();
                                         game.MaxGamers = msg.ReadInt32();
                                         game.IsHost = msg.ReadBoolean();
-                                        game.InternalIP = msg.ReadIPEndpoint();
-                                        game.ExternalIP = msg.SenderEndpoint;
+                                        game.InternalIP = msg.ReadIPEndPoint();
+                                        game.ExternalIP = msg.SenderEndPoint;
                                         game.Game = msg.ReadString();
 
 
@@ -68,7 +68,7 @@ namespace Peer2PeerMasterServer
 
                                 case 1:
                                     // It's a client wanting a list of registered hosts
-                                    Console.WriteLine("Sending list of " + registeredHosts.Count + " hosts to client " + msg.SenderEndpoint);
+                                    Console.WriteLine("Sending list of " + registeredHosts.Count + " hosts to client " + msg.SenderEndPoint);
                                     string appid = msg.ReadString();
                                     foreach (AvailableGame g1 in registeredHosts.Values)
                                     {
@@ -83,18 +83,18 @@ namespace Peer2PeerMasterServer
                                             om.Write(g1.IsHost);
                                             om.Write(g1.InternalIP);
                                             om.Write(g1.ExternalIP);
-                                            peer.SendUnconnectedMessage(om, msg.SenderEndpoint);
+                                            peer.SendUnconnectedMessage(om, msg.SenderEndPoint);
                                         }
                                     }
 
                                     break;
                                 case 2:
                                     // It's a client wanting to connect to a specific (external) host
-                                    IPEndPoint clientInternal = msg.ReadIPEndpoint();
-                                    IPEndPoint hostExternal = msg.ReadIPEndpoint();
+                                    IPEndPoint clientInternal = msg.ReadIPEndPoint();
+                                    IPEndPoint hostExternal = msg.ReadIPEndPoint();
                                     string token = msg.ReadString();
 
-                                    Console.WriteLine(msg.SenderEndpoint + " requesting introduction to " + hostExternal + " (token " + token + ")");
+                                    Console.WriteLine(msg.SenderEndPoint + " requesting introduction to " + hostExternal + " (token " + token + ")");
 
                                     // find in list
                                     foreach (AvailableGame elist in registeredHosts.Values)
@@ -107,7 +107,7 @@ namespace Peer2PeerMasterServer
                                                     elist.InternalIP, // host internal
                                                     elist.ExternalIP, // host external
                                                     clientInternal, // client internal
-                                                    msg.SenderEndpoint, // client external
+                                                    msg.SenderEndPoint, // client external
                                                     token // request token
                                             );
                                             break;
@@ -115,9 +115,9 @@ namespace Peer2PeerMasterServer
                                     }
                                     break;
                                 case 3:
-                                    if (registeredHosts.ContainsKey(msg.SenderEndpoint))
+                                    if (registeredHosts.ContainsKey(msg.SenderEndPoint))
                                     {
-                                        AvailableGame game = registeredHosts[msg.SenderEndpoint];
+                                        AvailableGame game = registeredHosts[msg.SenderEndPoint];
                                         string tag = msg.ReadString();
                                         string gamename = msg.ReadString();
                                         if (game.GamerTag == tag)
@@ -128,9 +128,9 @@ namespace Peer2PeerMasterServer
                                     }
                                     break;
                                 case 4 :
-                                    if (registeredHosts.ContainsKey(msg.SenderEndpoint))
+                                    if (registeredHosts.ContainsKey(msg.SenderEndPoint))
                                     {
-                                        AvailableGame game = registeredHosts[msg.SenderEndpoint];
+                                        AvailableGame game = registeredHosts[msg.SenderEndPoint];
                                         int count = msg.ReadInt32();
                                         string tag = msg.ReadString();                                        
                                         if (game.GamerTag == tag)
@@ -140,7 +140,7 @@ namespace Peer2PeerMasterServer
 	                                        game.PrivateGamerSlots = msg.ReadInt32();
 	                                        game.MaxGamers = msg.ReadInt32();
 	                                        game.IsHost = msg.ReadBoolean();
-	                                        game.InternalIP = msg.ReadIPEndpoint();
+	                                        game.InternalIP = msg.ReadIPEndPoint();
 	                                        game.Game = msg.ReadString();
                                         }
                                     }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -39,15 +39,6 @@
     <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PeerToPeerGame.cs">
-      <Link>PeerToPeerGame.cs</Link>
-    </Compile>
-    <Compile Include="Tank.cs">
-      <Link>Tank.cs</Link>
-    </Compile>
-    <Compile Include="Program.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Content\Font.spritefont">
       <Link>Content\Font.spritefont</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -56,13 +47,43 @@
       <Link>Content\Font.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\gamepad.png" />
+    <Content Include="Content\Tank.tga" />
     <Content Include="Content\Tank.xnb">
       <Link>Content\Tank.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Turret.tga" />
     <Content Include="Content\Turret.xnb">
       <Link>Content\Turret.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Game.ico" />
+    <Content Include="PeerToPeer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\Font.spritefont" />
+    <None Include="Content\Font.xnb" />
+    <None Include="Content\Tank.xnb" />
+    <None Include="Content\Turret.xnb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PeerToPeerGame.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Tank.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Net.WindowsGL.csproj">
+      <Project>{6d6009f4-0afb-4806-89d7-7945f20270f5}</Project>
+      <Name>MonoGame.Framework.Net.WindowsGL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.WindowsGL.csproj">
+      <Project>{6d75e618-19ca-4c51-9546-f10965fbc0b8}</Project>
+      <Name>MonoGame.Framework.WindowsGL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MonoGame\ThirdParty\Lidgren.Network\Lidgren.Network.WindowsGL.csproj">
+      <Project>{6fb94a85-7189-4a3c-9057-d7d0c6a61eac}</Project>
+      <Name>Lidgren.Network.WindowsGL</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
