@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.Framework.Net.Wind
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peer2PeerSampleGame", "Peer2PeerSampleGame\Peer2PeerSampleGame.csproj", "{E4809BFC-0599-46F0-9074-BE125E722742}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peer2PeerSample", "Peer2PeerSample\Peer2PeerSample.csproj", "{86A619E2-C8D0-452B-B762-C69D5BB07C98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,20 @@ Global
 		{E4809BFC-0599-46F0-9074-BE125E722742}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E4809BFC-0599-46F0-9074-BE125E722742}.Release|x86.ActiveCfg = Release|Any CPU
 		{E4809BFC-0599-46F0-9074-BE125E722742}.Release|x86.Build.0 = Release|Any CPU
+		{86A619E2-C8D0-452B-B762-C69D5BB07C98}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{86A619E2-C8D0-452B-B762-C69D5BB07C98}.Debug|iPhone.ActiveCfg = Debug|x86
+		{86A619E2-C8D0-452B-B762-C69D5BB07C98}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
+		{86A619E2-C8D0-452B-B762-C69D5BB07C98}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{86A619E2-C8D0-452B-B762-C69D5BB07C98}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{86A619E2-C8D0-452B-B762-C69D5BB07C98}.Debug|x86.ActiveCfg = Debug|x86
+		{86A619E2-C8D0-452B-B762-C69D5BB07C98}.Debug|x86.Build.0 = Debug|x86
+		{86A619E2-C8D0-452B-B762-C69D5BB07C98}.Release|Any CPU.ActiveCfg = Release|x86
+		{86A619E2-C8D0-452B-B762-C69D5BB07C98}.Release|iPhone.ActiveCfg = Release|x86
+		{86A619E2-C8D0-452B-B762-C69D5BB07C98}.Release|iPhoneSimulator.ActiveCfg = Release|x86
+		{86A619E2-C8D0-452B-B762-C69D5BB07C98}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{86A619E2-C8D0-452B-B762-C69D5BB07C98}.Release|Mixed Platforms.Build.0 = Release|x86
+		{86A619E2-C8D0-452B-B762-C69D5BB07C98}.Release|x86.ActiveCfg = Release|x86
+		{86A619E2-C8D0-452B-B762-C69D5BB07C98}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
