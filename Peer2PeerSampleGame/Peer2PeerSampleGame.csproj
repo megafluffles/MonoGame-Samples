@@ -122,7 +122,7 @@
       <Name>MonoGame.Framework.WindowsGL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\MonoGame\ThirdParty\Lidgren.Network\Lidgren.Network.WindowsGL.csproj">
-      <Project>{6fb94a85-7189-4a3c-9057-d7d0c6a61eac}</Project>
+      <Project>{9E89BF17-C551-48FD-9C36-816B8FE20EFA}</Project>
       <Name>Lidgren.Network.WindowsGL</Name>
     </ProjectReference>
   </ItemGroup>
